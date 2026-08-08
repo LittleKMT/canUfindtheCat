@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#6c4cff" />
+    <meta name="description" content="Can You Find the Cat? A colorful hidden-cat puzzle game." />
+    <title>Can You Find the Cat?</title>
+    <link rel="icon" href="assets/cat-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="start-screen screen is-active" id="startScreen" aria-labelledby="gameTitle">
+        <div class="floating-shape shape-one"></div>
+        <div class="floating-shape shape-two"></div>
+        <button class="sound-button" id="startSoundButton" aria-label="Toggle sound">♪</button>
+        <div class="hero-card">
+          <div class="cat-logo" aria-hidden="true">
+            <span class="ear left"></span><span class="ear right"></span>
+            <span class="eye left"></span><span class="eye right"></span>
+            <span class="nose"></span>
+          </div>
+          <p class="eyebrow">A tiny mystery awaits</p>
+          <h1 id="gameTitle">Can You<br /><span>Find the Cat?</span></h1>
+          <p class="hero-copy">Look closely. Tap the one hidden cat before your hearts run out!</p>
+          <button class="primary-button" id="playButton"><span>Play now</span><b>→</b></button>
+          <button class="text-button" id="levelsButton">Choose a level</button>
+          <div class="continue-note" id="continueNote"></div>
+        </div>
+        <p class="footer-note">15 hand-crafted picture puzzles</p>
+      </section>
+
+      <section class="level-screen screen" id="levelScreen" aria-label="Level selection">
+        <header class="simple-header">
+          <button class="icon-button" data-action="home" aria-label="Back to home">←</button>
+          <div><p class="mini-label">Pick a puzzle</p><h2>Levels</h2></div>
+          <div class="star-total"><span>★</span><b id="starTotal">0</b></div>
+        </header>
+        <div class="level-grid" id="levelGrid"></div>
+      </section>
+
+      <section class="game-screen screen" id="gameScreen" aria-label="Game">
+        <header class="game-header">
+          <button class="icon-button" data-action="home" aria-label="Back to home">⌂</button>
+          <div class="level-heading">
+            <span id="levelLabel">LEVEL 1</span>
+            <div class="progress-track"><i id="progressFill"></i></div>
+          </div>
+          <div class="hearts" id="hearts" aria-label="3 lives"></div>
+        </header>
+
+        <div class="mission-row">
+          <div class="mission-cat" aria-hidden="true">🐱</div>
+          <div><span>Your mission</span><strong>Find the hidden cat!</strong></div>
+          <div class="timer" id="timer">00:00</div>
+        </div>
+
+        <div class="puzzle-wrap">
+          <div class="image-frame" id="imageFrame">
+            <div class="image-stage" id="imageStage">
+              <img id="puzzleImage" alt="A detailed hidden-cat puzzle" draggable="false" />
+              <div class="answer-ring" id="answerRing" aria-hidden="true"></div>
+              <div class="hint-lens" id="hintLens" aria-hidden="true"></div>
+            </div>
+            <div class="loading-card" id="loadingCard"><span class="loader"></span><b>Preparing puzzle…</b></div>
+          </div>
+          <div class="zoom-controls" aria-label="Zoom controls">
+            <button id="zoomOut" aria-label="Zoom out">−</button>
+            <button id="zoomReset" aria-label="Reset zoom">⌾</button>
+            <button id="zoomIn" aria-label="Zoom in">＋</button>
+          </div>
+        </div>
+
+        <div class="game-actions">
+          <button class="hint-button" id="hintButton"><span>⌕</span><b>Hint</b><small id="hintCount">3 left</small></button>
+          <p>Tap the picture where you see the cat</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal-backdrop" id="successModal" aria-hidden="true">
+      <section class="result-card" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+        <div class="result-burst">★</div>
+        <p class="eyebrow">Great eyes!</p>
+        <h2 id="resultTitle">You found the cat!</h2>
+        <p id="resultMessage">That was a sneaky hiding spot.</p>
+        <div class="result-stats"><div><span>Time</span><b id="resultTime">00:00</b></div><div><span>Stars</span><b id="resultStars">★★★</b></div></div>
+        <button class="primary-button" id="nextButton"><span>Next level</span><b>→</b></button>
+        <button class="text-button" id="resultLevelsButton">All levels</button>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
