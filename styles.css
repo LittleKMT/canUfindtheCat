@@ -72,10 +72,15 @@ h1 span { color: var(--yellow); }
 .image-frame:active { cursor: grabbing; }
 .image-stage { position: absolute; transform-origin: center; will-change: transform; }
 #puzzleImage { width: 100%; height: 100%; display: block; object-fit: cover; user-select: none; -webkit-user-select: none; }
-.found-cats { position: absolute; inset: 0; z-index: 2; pointer-events: none; }.found-cat-overlay { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; animation: orangeReveal .4s cubic-bezier(.2,1.4,.5,1); }@keyframes orangeReveal { from { opacity: 0; filter: brightness(2); } }
+.palette-light #puzzleImage,.palette-light .found-cat-overlay,.palette-light .level-card img { filter: invert(1) hue-rotate(180deg); }
+.found-cats { position: absolute; inset: 0; z-index: 2; pointer-events: none; }.found-cat-overlay { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; animation: orangeReveal .4s cubic-bezier(.2,1.4,.5,1); }@keyframes orangeReveal { from { opacity: 0; scale: .96; } }
 .loading-card { position: absolute; inset: 0; background: #f0ecff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: #665d80; transition: opacity .25s; }.loading-card.is-hidden { opacity: 0; pointer-events: none; }.loader { width: 44px; height: 44px; border: 5px solid #d8d0f6; border-top-color: var(--purple); border-radius: 50%; animation: spin .8s linear infinite; }@keyframes spin { to { rotate: 360deg; } }
 .hint-lens { position: absolute; translate: -50% -50%; pointer-events: none; opacity: 0; }
 .hint-lens { width: 32%; aspect-ratio: 1; border-radius: 50%; border: 5px dashed var(--yellow); background: #ffd84d14; box-shadow: 0 0 0 200vmax #2d214aa3; z-index: 3; }.hint-lens.show { opacity: 1; animation: hintPulse 1s ease-in-out 3; }@keyframes hintPulse { 50% { scale: 1.1; border-color: white; } }
+.action-tools { display: flex; align-items: center; gap: 8px; }
+.palette-switch { display: flex; padding: 4px; background: #eeeaff; border-radius: 15px; }
+.palette-switch button { height: 40px; padding: 0 10px; display: flex; align-items: center; gap: 5px; border: 0; border-radius: 11px; background: transparent; color: #746c8c; font-size: 12px; font-weight: 900; cursor: pointer; }
+.palette-switch button span { font-size: 16px; }.palette-switch button.is-active { background: #fff; color: var(--purple-dark); box-shadow: 0 2px 6px #32236e18; }
 .zoom-controls { display: flex; padding: 4px; background: #eeeaff; border-radius: 15px; }.zoom-controls button { height: 40px; padding: 0 13px; display: flex; align-items: center; gap: 7px; border: 0; border-radius: 11px; background: #fff; color: var(--purple-dark); font-weight: 900; cursor: pointer; box-shadow: 0 2px 6px #32236e18; }.zoom-controls button span { font-size: 22px; }.zoom-controls button b { font-size: 12px; }
 .game-actions { flex: 0 0 auto; min-height: 64px; padding: 8px max(14px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left)); display: flex; align-items: center; justify-content: space-between; gap: 12px; background: white; box-shadow: 0 -5px 18px #33245e24; z-index: 6; }.game-actions p { margin: 0; color: #81799c; font-size: 12px; font-weight: 800; text-align: center; }.hint-button { display: flex; align-items: center; gap: 8px; border: 0; background: var(--yellow); padding: 7px 13px 7px 8px; border-radius: 14px; cursor: pointer; box-shadow: 0 4px 0 #dcb128; }.hint-button span { width: 30px; height: 30px; display: grid; place-items: center; background: white; border-radius: 9px; font-size: 22px; }.hint-button small { color: #73621b; }
 .miss-mark { position: fixed; width: 35px; height: 35px; translate: -50% -50%; pointer-events: none; z-index: 20; }.miss-mark::before,.miss-mark::after { content: ""; position: absolute; left: 16px; top: 2px; width: 4px; height: 31px; border-radius: 4px; background: #ff4255; rotate: 45deg; }.miss-mark::after { rotate: -45deg; }.miss-mark { animation: miss .55s forwards; }@keyframes miss { 60% { scale: 1.2; } to { opacity: 0; scale: .7; } }
@@ -94,6 +99,10 @@ h1 span { color: var(--yellow); }
   .game-actions { min-height: 66px; }
   .hint-button { padding-right: 10px; }
   .hint-button small { display: none; }
+  .action-tools { gap: 5px; }
+  .palette-switch { padding: 3px; }
+  .palette-switch button { height: 38px; padding: 0 7px; }
+  .palette-switch button span { display: none; }
   .zoom-controls button { height: 38px; padding: 0 11px; }
 }
 @media (max-height: 650px) and (orientation: landscape) {

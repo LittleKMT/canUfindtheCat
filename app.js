@@ -25,6 +25,7 @@ const state = {
   scores: JSON.parse(localStorage.getItem("cat-scores") || "{}"),
   hearts: 5, hints: 3, startedAt: 0, elapsed: 0, timerId: null, found: new Set(),
   solved: false, sound: localStorage.getItem("cat-sound") !== "off",
+  palette: localStorage.getItem("cat-palette") === "light" ? "light" : "dark",
   scale: 1, panX: 0, panY: 0, dragging: false, moved: false, pointerX: 0, pointerY: 0,
   pointers: new Map(), gesture: false, pinchDistance: 0, pinchMidpoint: null
 };
@@ -50,6 +51,17 @@ function renderHome() {
   const completed = Object.keys(state.scores).length;
   $("#continueNote").textContent = completed ? `${completed} of ${levels.length} puzzles completed` : "Progress saves automatically";
   $("#startSoundButton").textContent = state.sound ? "♪" : "×";
+}
+
+function applyPalette(palette) {
+  state.palette = palette === "light" ? "light" : "dark";
+  document.body.classList.toggle("palette-light", state.palette === "light");
+  document.querySelectorAll("[data-palette]").forEach(button => {
+    const active = button.dataset.palette === state.palette;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  localStorage.setItem("cat-palette", state.palette);
 }
 
 function renderLevels() {
@@ -236,6 +248,7 @@ $("#levelsButton").addEventListener("click", renderLevels);
 document.querySelectorAll('[data-action="home"]').forEach(button => button.addEventListener("click", () => { resetView(); renderHome(); showScreen("startScreen"); }));
 $("#hintButton").addEventListener("click", useHint);
 $("#zoomReset").addEventListener("click", resetView);
+document.querySelectorAll("[data-palette]").forEach(button => button.addEventListener("click", () => applyPalette(button.dataset.palette)));
 $("#nextButton").addEventListener("click", () => { hideResult(); startLevel(state.level === levels.length-1 ? 0 : state.level+1); });
 $("#resultLevelsButton").addEventListener("click", () => { hideResult(); renderLevels(); });
 $("#startSoundButton").addEventListener("click", () => { state.sound=!state.sound; localStorage.setItem("cat-sound",state.sound?"on":"off"); renderHome(); tone("hint"); });
@@ -293,4 +306,5 @@ imageFrame.addEventListener("pointercancel", event => {
 imageFrame.addEventListener("wheel", event => { event.preventDefault(); zoomAt(state.scale + (event.deltaY < 0 ? .25 : -.25), event.clientX, event.clientY); }, { passive: false });
 window.addEventListener("resize", fitStage);
 
+applyPalette(state.palette);
 renderHome();

@@ -10,6 +10,7 @@ Open the GitHub Pages URL shown in the repository details.
 
 - 5 monochrome levels, 4 cats per level, and five-heart scoring
 - Each found cat changes from gray to orange
+- Switch between black-background/white-line and white-background/black-line views
 - Hint lens, pinch zoom, pan, and reset view
 - Responsive phone and desktop layout
 - Progress, best time, and stars saved locally

@@ -68,8 +68,14 @@
         <div class="game-actions">
           <button class="hint-button" id="hintButton"><span>⌕</span><b>Hint</b><small id="hintCount">3 left</small></button>
           <p>Pinch to zoom · Find all 4 cats</p>
-          <div class="zoom-controls" aria-label="Zoom controls">
-            <button id="zoomReset" aria-label="Reset picture view"><span>⌾</span><b>Reset</b></button>
+          <div class="action-tools">
+            <div class="palette-switch" role="group" aria-label="Picture colors">
+              <button data-palette="dark" aria-pressed="true"><span>●</span><b>Dark</b></button>
+              <button data-palette="light" aria-pressed="false"><span>○</span><b>White</b></button>
+            </div>
+            <div class="zoom-controls" aria-label="Zoom controls">
+              <button id="zoomReset" aria-label="Reset picture view"><span>⌾</span><b>Reset</b></button>
+            </div>
           </div>
         </div>
       </section>
