@@ -1,15 +1,17 @@
 const levels = [
-  { x: .6643, y: .5335, hitX: .040, hitY: .042, file: "01", name: "Birdhouse Village" },
-  { x: .3947, y: .6152, hitX: .065, hitY: .052, file: "02", name: "Sushi Shuffle" },
-  { x: .6707, y: .4486, hitX: .052, hitY: .052, file: "04", name: "Secret Garden" },
-  { x: .2069, y: .1639, hitX: .060, hitY: .060, file: "05", name: "Toy Carnival" },
-  { x: .8066, y: .8724, hitX: .055, hitY: .055, file: "06", name: "Busy Harbor" },
-  { x: .8628, y: .1611, hitX: .052, hitY: .052, file: "08", name: "Owl Crowd" },
-  { x: .9230, y: .5235, hitX: .052, hitY: .055, file: "10", name: "Rainbow Owls" },
-  { x: .1467, y: .1667, hitX: .050, hitY: .050, file: "14", name: "Creative Studio" }
-].map(level => ({ ...level, image: `assets/levels/${level.file}.webp` }));
+  { file: "dark-01", name: "Midnight Market", cats: [
+    {x:.1192,y:.0969,hitX:.035,hitY:.039,clipX:.038,clipY:.043},{x:.8788,y:.2632,hitX:.070,hitY:.045,clipX:.072,clipY:.047},{x:.1603,y:.7915,hitX:.058,hitY:.064,clipX:.060,clipY:.067},{x:.8254,y:.8317,hitX:.067,hitY:.058,clipX:.069,clipY:.060}] },
+  { file: "dark-02", name: "Future Station", cats: [
+    {x:.6316,y:.0443,hitX:.057,hitY:.035,clipX:.058,clipY:.035},{x:.1284,y:.5255,hitX:.032,hitY:.044,clipX:.034,clipY:.046},{x:.9362,y:.6049,hitX:.038,hitY:.070,clipX:.040,clipY:.073},{x:.1427,y:.8664,hitX:.061,hitY:.072,clipX:.063,clipY:.075}] },
+  { file: "dark-03", name: "Shadow Greenhouse", cats: [
+    {x:.8186,y:.1204,hitX:.098,hitY:.046,clipX:.102,clipY:.048},{x:.1096,y:.1435,hitX:.046,hitY:.048,clipX:.048,clipY:.050},{x:.9334,y:.5893,hitX:.047,hitY:.071,clipX:.049,clipY:.074},{x:.2069,y:.7576,hitX:.043,hitY:.060,clipX:.045,clipY:.063}] },
+  { file: "dark-04", name: "Orbital Observatory", cats: [
+    {x:.0502,y:.1324,hitX:.038,hitY:.060,clipX:.040,clipY:.063},{x:.9422,y:.2026,hitX:.055,hitY:.080,clipX:.058,clipY:.083},{x:.1770,y:.7436,hitX:.082,hitY:.057,clipX:.085,clipY:.060},{x:.7959,y:.7978,hitX:.078,hitY:.060,clipX:.081,clipY:.063}] },
+  { file: "dark-05", name: "After-hours Library", cats: [
+    {x:.1077,y:.0566,hitX:.033,hitY:.037,clipX:.035,clipY:.039},{x:.8517,y:.2536,hitX:.059,hitY:.042,clipX:.062,clipY:.044},{x:.1439,y:.7516,hitX:.043,hitY:.050,clipX:.045,clipY:.053},{x:.6643,y:.8983,hitX:.055,hitY:.058,clipX:.058,clipY:.061}] }
+].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
-const CONTENT_VERSION = "bright-levels-v2";
+const CONTENT_VERSION = "four-cats-monochrome-v3";
 if (localStorage.getItem("cat-content-version") !== CONTENT_VERSION) {
   ["cat-current", "cat-unlocked", "cat-scores"].forEach(key => localStorage.removeItem(key));
   localStorage.setItem("cat-content-version", CONTENT_VERSION);
@@ -21,7 +23,7 @@ const state = {
   level: Math.min(Number(localStorage.getItem("cat-current")) || 0, levels.length - 1),
   unlocked: Math.min(Number(localStorage.getItem("cat-unlocked")) || 0, levels.length - 1),
   scores: JSON.parse(localStorage.getItem("cat-scores") || "{}"),
-  hearts: 3, hints: 3, startedAt: 0, elapsed: 0, timerId: null,
+  hearts: 5, hints: 3, startedAt: 0, elapsed: 0, timerId: null, found: new Set(),
   solved: false, sound: localStorage.getItem("cat-sound") !== "off",
   scale: 1, panX: 0, panY: 0, dragging: false, moved: false, pointerX: 0, pointerY: 0,
   pointers: new Map(), gesture: false, pinchDistance: 0, pinchMidpoint: null
@@ -30,7 +32,7 @@ const state = {
 const imageStage = $("#imageStage");
 const puzzleImage = $("#puzzleImage");
 const imageFrame = $("#imageFrame");
-const answerRing = $("#answerRing");
+const foundCats = $("#foundCats");
 const hintLens = $("#hintLens");
 
 function showScreen(id) {
@@ -65,12 +67,11 @@ function renderLevels() {
 }
 
 function startLevel(index) {
-  state.level = index; state.hearts = 3; state.hints = 3; state.solved = false; state.elapsed = 0;
+  state.level = index; state.hearts = 5; state.hints = 3; state.solved = false; state.elapsed = 0; state.found = new Set();
   resetView(); save(); showScreen("gameScreen");
   $("#levelLabel").textContent = `LEVEL ${index + 1}`;
-  $("#progressFill").style.width = `${(index / levels.length) * 100}%`;
-  answerRing.classList.remove("show"); hintLens.classList.remove("show");
-  placeMarker(answerRing); placeMarker(hintLens);
+  $("#progressFill").style.width = "0%"; $("#catProgress").textContent = "0 / 4";
+  foundCats.innerHTML = ""; hintLens.classList.remove("show");
   updateHearts(); updateHints();
   $("#loadingCard").classList.remove("is-hidden");
   puzzleImage.onload = () => {
@@ -79,18 +80,18 @@ function startLevel(index) {
     state.startedAt = Date.now(); startTimer();
   };
   puzzleImage.src = levels[index].image;
-  puzzleImage.alt = `Level ${index + 1}: ${levels[index].name}. Find the hidden cat.`;
+  puzzleImage.alt = `Level ${index + 1}: ${levels[index].name}. Find four hidden cats.`;
   if (puzzleImage.complete) puzzleImage.onload();
-  const next = levels[index + 1]; if (next) new Image().src = next.image;
+  new Image().src = levels[index].answer;
+  const next = levels[index + 1]; if (next) { new Image().src = next.image; new Image().src = next.answer; }
 }
 
-function placeMarker(element) {
-  const level = levels[state.level];
-  element.style.left = `${level.x * 100}%`; element.style.top = `${level.y * 100}%`;
+function placeMarker(element, cat) {
+  element.style.left = `${cat.x * 100}%`; element.style.top = `${cat.y * 100}%`;
 }
 
 function updateHearts() {
-  $("#hearts").innerHTML = [0,1,2].map(i => `<span class="heart ${i >= state.hearts ? "lost" : ""}">♥</span>`).join("");
+  $("#hearts").innerHTML = [0,1,2,3,4].map(i => `<span class="heart ${i >= state.hearts ? "lost" : ""}">♥</span>`).join("");
   $("#hearts").setAttribute("aria-label", `${state.hearts} lives remaining`);
 }
 function updateHints() { $("#hintCount").textContent = `${state.hints} left`; $("#hintButton").disabled = !state.hints || state.solved; }
@@ -115,27 +116,49 @@ function imageCoordinates(event) {
 function handleGuess(event) {
   if (state.solved || state.dragging || state.moved) return;
   const p = imageCoordinates(event); if (p.x < 0 || p.x > 1 || p.y < 0 || p.y > 1) return;
-  const target = levels[state.level];
-  const insideCat = ((p.x - target.x) / target.hitX) ** 2 + ((p.y - target.y) / target.hitY) ** 2 <= 1;
-  if (insideCat) solveLevel(); else wrongGuess(event.clientX, event.clientY);
+  const cats = levels[state.level].cats;
+  const hitIndex = cats.findIndex(cat => ((p.x - cat.x) / cat.hitX) ** 2 + ((p.y - cat.y) / cat.hitY) ** 2 <= 1);
+  if (hitIndex < 0) { wrongGuess(event.clientX, event.clientY); return; }
+  if (state.found.has(hitIndex)) { toast("You already found this cat"); return; }
+  state.found.add(hitIndex); revealCat(hitIndex); tone("hint"); updateCatProgress();
+  if (state.found.size === cats.length) setTimeout(solveLevel, 450);
+}
+
+function revealCat(index) {
+  const level = levels[state.level], cat = level.cats[index];
+  const overlay = document.createElement("img");
+  overlay.className = "found-cat-overlay"; overlay.src = level.answer; overlay.alt = "";
+  overlay.style.clipPath = `ellipse(${cat.clipX * 100}% ${cat.clipY * 100}% at ${cat.x * 100}% ${cat.y * 100}%)`;
+  foundCats.append(overlay);
+}
+
+function updateCatProgress() {
+  const total = levels[state.level].cats.length;
+  $("#catProgress").textContent = `${state.found.size} / ${total}`;
+  $("#progressFill").style.width = `${state.found.size / total * 100}%`;
+  if (state.found.size < total) toast(`${state.found.size} found · ${total - state.found.size} to go`);
+}
+
+function revealAllCats() {
+  levels[state.level].cats.forEach((_, index) => { if (!state.found.has(index)) revealCat(index); });
 }
 
 function wrongGuess(x, y) {
   state.hearts--; updateHearts(); tone("wrong");
   const mark = document.createElement("i"); mark.className = "miss-mark"; mark.style.left = `${x}px`; mark.style.top = `${y}px`; document.body.append(mark); setTimeout(() => mark.remove(), 600);
   if (state.hearts <= 0) {
-    answerRing.classList.add("show"); toast("There it is! Try this level again."); stopTimer();
+    revealAllCats(); toast("The four cats are orange — try again!"); stopTimer();
     setTimeout(() => startLevel(state.level), 2100);
   } else toast(state.hearts === 1 ? "Careful — one heart left!" : "Not there. Keep looking!");
 }
 
 function solveLevel() {
-  state.solved = true; stopTimer(); answerRing.classList.add("show"); tone("win"); confetti();
-  const stars = state.hearts === 3 ? 3 : state.hearts === 2 ? 2 : 1;
+  state.solved = true; stopTimer(); tone("win"); confetti();
+  const stars = state.hearts >= 4 ? 3 : state.hearts >= 2 ? 2 : 1;
   const previous = state.scores[state.level];
   state.scores[state.level] = { stars: Math.max(stars, previous?.stars || 0), best: Math.min(state.elapsed, previous?.best ?? Infinity) };
   state.unlocked = Math.max(state.unlocked, Math.min(state.level + 1, levels.length - 1)); save();
-  $("#progressFill").style.width = `${((state.level + 1) / levels.length) * 100}%`;
+  $("#progressFill").style.width = "100%";
   setTimeout(() => showResult(stars), 800);
 }
 
@@ -143,8 +166,8 @@ function showResult(stars) {
   $("#resultTime").textContent = formatTime(state.elapsed);
   $("#resultStars").textContent = "★".repeat(stars) + "☆".repeat(3-stars);
   const last = state.level === levels.length - 1;
-  $("#resultTitle").textContent = last ? "You found them all!" : "You found the cat!";
-  $("#resultMessage").textContent = last ? "Every sneaky cat has been discovered." : ["Sharp eyes! That cat almost fooled us.","Meow-nificent detective work!","A perfect little discovery!"][state.level % 3];
+  $("#resultTitle").textContent = last ? "You found all 20 cats!" : "All four cats found!";
+  $("#resultMessage").textContent = last ? "Every hidden cat is glowing orange." : ["Four perfect finds — sharp eyes!","Meow-nificent detective work!","Every cat has turned orange!"][state.level % 3];
   $("#nextButton span").textContent = last ? "Play again" : "Next level";
   $("#successModal").classList.add("show"); $("#successModal").setAttribute("aria-hidden", "false");
 }
@@ -152,6 +175,9 @@ function hideResult() { $("#successModal").classList.remove("show"); $("#success
 
 function useHint() {
   if (!state.hints || state.solved) return;
+  const index = levels[state.level].cats.findIndex((_, catIndex) => !state.found.has(catIndex));
+  if (index < 0) return;
+  placeMarker(hintLens, levels[state.level].cats[index]);
   state.hints--; updateHints(); hintLens.classList.remove("show"); void hintLens.offsetWidth; hintLens.classList.add("show"); tone("hint");
   toast(state.hints ? "Search inside the glowing area" : "Last hint used — look closely!");
   setTimeout(() => hintLens.classList.remove("show"), 3300);
