@@ -1,20 +1,19 @@
 const levels = [
-  { x: .668, y: .536, name: "Birdhouse Village" },
-  { x: .416, y: .540, name: "Sushi Shuffle" },
-  { x: .916, y: .500, name: "Neon Night" },
-  { x: .672, y: .560, name: "Secret Garden" },
-  { x: .200, y: .204, name: "Toy Carnival" },
-  { x: .800, y: .840, name: "Busy Harbor" },
-  { x: .148, y: .532, name: "Old Library" },
-  { x: .872, y: .160, name: "Owl Crowd" },
-  { x: .172, y: .816, name: "Night Owls" },
-  { x: .920, y: .512, name: "Rainbow Owls" },
-  { x: .292, y: .144, name: "Inventor's Attic" },
-  { x: .808, y: .828, name: "Midnight Study" },
-  { x: .888, y: .360, name: "Enchanted Archive" },
-  { x: .144, y: .144, name: "Creative Studio" },
-  { x: .900, y: .776, name: "Maker Lab" }
-].map((level, index) => ({ ...level, image: `assets/levels/${String(index + 1).padStart(2, "0")}.webp` }));
+  { x: .6643, y: .5335, hitX: .040, hitY: .042, file: "01", name: "Birdhouse Village" },
+  { x: .3947, y: .6152, hitX: .065, hitY: .052, file: "02", name: "Sushi Shuffle" },
+  { x: .6707, y: .4486, hitX: .052, hitY: .052, file: "04", name: "Secret Garden" },
+  { x: .2069, y: .1639, hitX: .060, hitY: .060, file: "05", name: "Toy Carnival" },
+  { x: .8066, y: .8724, hitX: .055, hitY: .055, file: "06", name: "Busy Harbor" },
+  { x: .8628, y: .1611, hitX: .052, hitY: .052, file: "08", name: "Owl Crowd" },
+  { x: .9230, y: .5235, hitX: .052, hitY: .055, file: "10", name: "Rainbow Owls" },
+  { x: .1467, y: .1667, hitX: .050, hitY: .050, file: "14", name: "Creative Studio" }
+].map(level => ({ ...level, image: `assets/levels/${level.file}.webp` }));
+
+const CONTENT_VERSION = "bright-levels-v2";
+if (localStorage.getItem("cat-content-version") !== CONTENT_VERSION) {
+  ["cat-current", "cat-unlocked", "cat-scores"].forEach(key => localStorage.removeItem(key));
+  localStorage.setItem("cat-content-version", CONTENT_VERSION);
+}
 
 const $ = (selector) => document.querySelector(selector);
 const screens = [...document.querySelectorAll(".screen")];
@@ -116,8 +115,8 @@ function handleGuess(event) {
   if (state.solved || state.dragging || state.moved) return;
   const p = imageCoordinates(event); if (p.x < 0 || p.x > 1 || p.y < 0 || p.y > 1) return;
   const target = levels[state.level];
-  const distance = Math.hypot((p.x - target.x) * 1.1, p.y - target.y);
-  if (distance < .065) solveLevel(); else wrongGuess(event.clientX, event.clientY);
+  const insideCat = ((p.x - target.x) / target.hitX) ** 2 + ((p.y - target.y) / target.hitY) ** 2 <= 1;
+  if (insideCat) solveLevel(); else wrongGuess(event.clientX, event.clientY);
 }
 
 function wrongGuess(x, y) {
