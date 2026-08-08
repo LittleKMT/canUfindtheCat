@@ -8,21 +8,43 @@ const levels = [
   { file: "dark-04", name: "Orbital Observatory", cats: [
     {x:.0502,y:.1324,hitX:.038,hitY:.060,clipX:.040,clipY:.063},{x:.9422,y:.2026,hitX:.055,hitY:.080,clipX:.058,clipY:.083},{x:.1770,y:.7436,hitX:.082,hitY:.057,clipX:.085,clipY:.060},{x:.7959,y:.7978,hitX:.078,hitY:.060,clipX:.081,clipY:.063}] },
   { file: "dark-05", name: "After-hours Library", cats: [
-    {x:.1077,y:.0566,hitX:.033,hitY:.037,clipX:.035,clipY:.039},{x:.8517,y:.2536,hitX:.059,hitY:.042,clipX:.062,clipY:.044},{x:.1439,y:.7516,hitX:.043,hitY:.050,clipX:.045,clipY:.053},{x:.6643,y:.8983,hitX:.055,hitY:.058,clipX:.058,clipY:.061}] }
+    {x:.1077,y:.0566,hitX:.033,hitY:.037,clipX:.035,clipY:.039},{x:.8517,y:.2536,hitX:.059,hitY:.042,clipX:.062,clipY:.044},{x:.1439,y:.7516,hitX:.043,hitY:.050,clipX:.045,clipY:.053},{x:.6643,y:.8983,hitX:.055,hitY:.058,clipX:.058,clipY:.061}] },
+  { file: "dark-06", name: "Airport Concourse", cats: [
+    {x:.6019,y:.1162,hitX:.0573,hitY:.0271,clipX:.064,clipY:.035},{x:.2166,y:.3726,hitX:.0446,hitY:.0605,clipX:.052,clipY:.068},{x:.8838,y:.5048,hitX:.0653,hitY:.0366,clipX:.073,clipY:.044},{x:.4984,y:.7691,hitX:.0239,hitY:.0271,clipX:.031,clipY:.035}] },
+  { file: "dark-07", name: "Rooftop Greenhouses", cats: [
+    {x:.7898,y:.2245,hitX:.0382,hitY:.0494,clipX:.046,clipY:.057},{x:.3646,y:.4315,hitX:.0207,hitY:.0589,clipX:.028,clipY:.067},{x:.1354,y:.6959,hitX:.0334,hitY:.0239,clipX:.041,clipY:.032},{x:.6879,y:.7659,hitX:.0510,hitY:.0334,clipX:.059,clipY:.041}] },
+  { file: "dark-08", name: "Maker Workshop", cats: [
+    {x:.3185,y:.1401,hitX:.0350,hitY:.0446,clipX:.043,clipY:.052},{x:.8089,y:.4236,hitX:.0637,hitY:.0382,clipX:.072,clipY:.046},{x:.4395,y:.4570,hitX:.0701,hitY:.0621,clipX:.079,clipY:.071},{x:.2994,y:.8615,hitX:.0510,hitY:.0525,clipX:.059,clipY:.061}] },
+  { file: "dark-09", name: "Metro Control Room", cats: [
+    {x:.3742,y:.2182,hitX:.0462,hitY:.0557,clipX:.054,clipY:.064},{x:.2389,y:.4236,hitX:.0637,hitY:.0446,clipX:.072,clipY:.053},{x:.7261,y:.4634,hitX:.0669,hitY:.0430,clipX:.075,clipY:.051},{x:.4061,y:.8201,hitX:.0717,hitY:.0430,clipX:.080,clipY:.051}] },
+  { file: "dark-10", name: "Museum Archive", cats: [
+    {x:.7500,y:.2102,hitX:.0748,hitY:.0446,clipX:.083,clipY:.053},{x:.6322,y:.3901,hitX:.0462,hitY:.0717,clipX:.054,clipY:.080},{x:.2102,y:.5191,hitX:.0318,hitY:.0414,clipX:.040,clipY:.049},{x:.4666,y:.6783,hitX:.0780,hitY:.0414,clipX:.086,clipY:.049}] },
+  { file: "dark-11", name: "Future Food Court", cats: [
+    {x:.3694,y:.2022,hitX:.0287,hitY:.0430,clipX:.037,clipY:.051},{x:.2739,y:.4889,hitX:.0446,hitY:.0303,clipX:.053,clipY:.038},{x:.7755,y:.5701,hitX:.0525,hitY:.0318,clipX:.061,clipY:.040},{x:.4809,y:.7420,hitX:.0510,hitY:.0669,clipX:.059,clipY:.075}] },
+  { file: "dark-12", name: "Aquarium Workshop", cats: [
+    {x:.6417,y:.1688,hitX:.0462,hitY:.0350,clipX:.054,clipY:.043},{x:.7691,y:.4506,hitX:.0844,hitY:.0494,clipX:.093,clipY:.058},{x:.2643,y:.4666,hitX:.0382,hitY:.0621,clipX:.046,clipY:.071},{x:.4586,y:.7341,hitX:.0764,hitY:.0589,clipX:.085,clipY:.067}] },
+  { file: "dark-13", name: "Music Warehouse", cats: [
+    {x:.5717,y:.1513,hitX:.0525,hitY:.0239,clipX:.061,clipY:.032},{x:.3551,y:.3822,hitX:.0334,hitY:.0605,clipX:.041,clipY:.069},{x:.7070,y:.4156,hitX:.0605,hitY:.0398,clipX:.069,clipY:.048},{x:.1369,y:.6369,hitX:.0669,hitY:.0414,clipX:.075,clipY:.050}] },
+  { file: "dark-14", name: "Laundry Laboratory", cats: [
+    {x:.1592,y:.2850,hitX:.0637,hitY:.0398,clipX:.072,clipY:.048},{x:.8201,y:.3742,hitX:.0621,hitY:.0653,clipX:.071,clipY:.074},{x:.4427,y:.4506,hitX:.0541,hitY:.0780,clipX:.063,clipY:.087},{x:.4475,y:.8328,hitX:.0876,hitY:.0525,clipX:.096,clipY:.061}] },
+  { file: "dark-15", name: "Arcade Repair Shop", cats: [
+    {x:.6943,y:.2484,hitX:.0541,hitY:.0414,clipX:.063,clipY:.050},{x:.3439,y:.3392,hitX:.0478,hitY:.0621,clipX:.056,clipY:.071},{x:.7134,y:.6497,hitX:.0541,hitY:.0478,clipX:.063,clipY:.056},{x:.1576,y:.7006,hitX:.0589,hitY:.0796,clipX:.067,clipY:.088}] }
 ].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
-const CONTENT_VERSION = "four-cats-monochrome-v3";
+const CONTENT_VERSION = "fifteen-four-cat-levels-v4";
 if (localStorage.getItem("cat-content-version") !== CONTENT_VERSION) {
-  ["cat-current", "cat-unlocked", "cat-scores"].forEach(key => localStorage.removeItem(key));
   localStorage.setItem("cat-content-version", CONTENT_VERSION);
 }
 
 const $ = (selector) => document.querySelector(selector);
 const screens = [...document.querySelectorAll(".screen")];
+const savedScores = JSON.parse(localStorage.getItem("cat-scores") || "{}");
+const firstIncomplete = levels.findIndex((_, index) => !savedScores[index]);
+const unlockedFromScores = firstIncomplete < 0 ? levels.length - 1 : firstIncomplete;
 const state = {
   level: Math.min(Number(localStorage.getItem("cat-current")) || 0, levels.length - 1),
-  unlocked: Math.min(Number(localStorage.getItem("cat-unlocked")) || 0, levels.length - 1),
-  scores: JSON.parse(localStorage.getItem("cat-scores") || "{}"),
+  unlocked: Math.min(Math.max(Number(localStorage.getItem("cat-unlocked")) || 0, unlockedFromScores), levels.length - 1),
+  scores: savedScores,
   hearts: 5, hints: 3, startedAt: 0, elapsed: 0, timerId: null, found: new Set(),
   solved: false, sound: localStorage.getItem("cat-sound") !== "off",
   palette: localStorage.getItem("cat-palette") === "light" ? "light" : "dark",
@@ -178,7 +200,7 @@ function showResult(stars) {
   $("#resultTime").textContent = formatTime(state.elapsed);
   $("#resultStars").textContent = "★".repeat(stars) + "☆".repeat(3-stars);
   const last = state.level === levels.length - 1;
-  $("#resultTitle").textContent = last ? "You found all 20 cats!" : "All four cats found!";
+  $("#resultTitle").textContent = last ? "You found all 60 cats!" : "All four cats found!";
   $("#resultMessage").textContent = last ? "Every hidden cat is glowing orange." : ["Four perfect finds — sharp eyes!","Meow-nificent detective work!","Every cat has turned orange!"][state.level % 3];
   $("#nextButton span").textContent = last ? "Play again" : "Next level";
   $("#successModal").classList.add("show"); $("#successModal").setAttribute("aria-hidden", "false");
