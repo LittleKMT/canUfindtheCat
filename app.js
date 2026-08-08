@@ -23,7 +23,8 @@ const state = {
   scores: JSON.parse(localStorage.getItem("cat-scores") || "{}"),
   hearts: 3, hints: 3, startedAt: 0, elapsed: 0, timerId: null,
   solved: false, sound: localStorage.getItem("cat-sound") !== "off",
-  scale: 1, panX: 0, panY: 0, dragging: false, moved: false, pointerX: 0, pointerY: 0
+  scale: 1, panX: 0, panY: 0, dragging: false, moved: false, pointerX: 0, pointerY: 0,
+  pointers: new Map(), gesture: false, pinchDistance: 0, pinchMidpoint: null
 };
 
 const imageStage = $("#imageStage");
@@ -178,18 +179,19 @@ function setZoom(value) {
   if (state.scale === 1 && previousScale > 1) { state.panX = 0; state.panY = 0; }
   clampPan(); applyView();
 }
-function exploreZoom() {
-  if (state.scale > 1) { setZoom(state.scale + .5); return; }
-  const target = levels[state.level];
-  const safeX = target.x < .5 ? .78 : .22;
-  const safeY = target.y < .5 ? .78 : .22;
-  state.scale = 3;
-  state.panX = (.5 - safeX) * imageStage.offsetWidth * state.scale;
-  state.panY = (.5 - safeY) * imageStage.offsetHeight * state.scale;
+function zoomAt(value, clientX, clientY) {
+  const nextScale = Math.min(3, Math.max(1, value));
+  const frame = imageFrame.getBoundingClientRect();
+  const focusX = clientX - (frame.left + frame.width / 2);
+  const focusY = clientY - (frame.top + frame.height / 2);
+  const imageX = (focusX - state.panX) / state.scale;
+  const imageY = (focusY - state.panY) / state.scale;
+  state.panX = focusX - imageX * nextScale;
+  state.panY = focusY - imageY * nextScale;
+  state.scale = nextScale;
   clampPan(); applyView();
-  toast("Zoomed to another area — drag slowly to explore");
 }
-function resetView() { state.scale = 1; state.panX = 0; state.panY = 0; fitStage(); }
+function resetView() { state.scale = 1; state.panX = 0; state.panY = 0; state.dragging = false; state.gesture = false; state.pointers.clear(); fitStage(); }
 
 function toast(message) { const el = $("#toast"); el.textContent = message; el.classList.add("show"); clearTimeout(toast.timer); toast.timer = setTimeout(() => el.classList.remove("show"), 1800); }
 function tone(type) {
@@ -207,18 +209,62 @@ $("#playButton").addEventListener("click", () => startLevel(Math.min(state.unloc
 $("#levelsButton").addEventListener("click", renderLevels);
 document.querySelectorAll('[data-action="home"]').forEach(button => button.addEventListener("click", () => { resetView(); renderHome(); showScreen("startScreen"); }));
 $("#hintButton").addEventListener("click", useHint);
-$("#zoomIn").addEventListener("click", exploreZoom);
-$("#zoomOut").addEventListener("click", () => setZoom(state.scale - .5));
 $("#zoomReset").addEventListener("click", resetView);
 $("#nextButton").addEventListener("click", () => { hideResult(); startLevel(state.level === levels.length-1 ? 0 : state.level+1); });
 $("#resultLevelsButton").addEventListener("click", () => { hideResult(); renderLevels(); });
 $("#startSoundButton").addEventListener("click", () => { state.sound=!state.sound; localStorage.setItem("cat-sound",state.sound?"on":"off"); renderHome(); tone("hint"); });
 
-imageFrame.addEventListener("pointerdown", event => { const canPan = imageStage.offsetWidth * state.scale > imageFrame.clientWidth + 1 || imageStage.offsetHeight * state.scale > imageFrame.clientHeight + 1; state.dragging = canPan; state.moved = false; state.pointerX = event.clientX; state.pointerY = event.clientY; if (state.dragging) imageFrame.setPointerCapture(event.pointerId); });
-imageFrame.addEventListener("pointermove", event => { if (!state.dragging) return; const dx=event.clientX-state.pointerX, dy=event.clientY-state.pointerY; if (Math.abs(dx)+Math.abs(dy)>3) state.moved=true; state.panX += dx; state.panY += dy; state.pointerX=event.clientX; state.pointerY=event.clientY; setZoom(state.scale); });
-imageFrame.addEventListener("pointerup", event => { const wasDragging=state.dragging; state.dragging=false; if (!wasDragging || !state.moved) handleGuess(event); setTimeout(()=>state.moved=false,0); });
-imageFrame.addEventListener("dblclick", event => { event.preventDefault(); state.scale > 1 ? resetView() : exploreZoom(); });
-imageFrame.addEventListener("wheel", event => { event.preventDefault(); setZoom(state.scale + (event.deltaY < 0 ? .25 : -.25)); }, { passive: false });
+imageFrame.addEventListener("pointerdown", event => {
+  imageFrame.setPointerCapture(event.pointerId);
+  state.pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+  if (state.pointers.size === 1) {
+    const canPan = imageStage.offsetWidth * state.scale > imageFrame.clientWidth + 1 || imageStage.offsetHeight * state.scale > imageFrame.clientHeight + 1;
+    state.dragging = canPan; state.moved = false; state.pointerX = event.clientX; state.pointerY = event.clientY;
+  } else if (state.pointers.size === 2) {
+    const [a, b] = [...state.pointers.values()];
+    state.gesture = true; state.dragging = false; state.moved = true;
+    state.pinchDistance = Math.hypot(b.x - a.x, b.y - a.y);
+    state.pinchMidpoint = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+  }
+});
+imageFrame.addEventListener("pointermove", event => {
+  if (!state.pointers.has(event.pointerId)) return;
+  state.pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+  if (state.gesture && state.pointers.size >= 2) {
+    const [a, b] = [...state.pointers.values()];
+    const distance = Math.hypot(b.x - a.x, b.y - a.y);
+    const midpoint = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+    if (state.pinchDistance > 0) {
+      zoomAt(state.scale * distance / state.pinchDistance, state.pinchMidpoint.x, state.pinchMidpoint.y);
+      state.panX += midpoint.x - state.pinchMidpoint.x; state.panY += midpoint.y - state.pinchMidpoint.y;
+      clampPan(); applyView();
+    }
+    state.pinchDistance = distance; state.pinchMidpoint = midpoint;
+    return;
+  }
+  if (!state.dragging) return;
+  const dx = event.clientX - state.pointerX, dy = event.clientY - state.pointerY;
+  if (Math.abs(dx) + Math.abs(dy) > 3) state.moved = true;
+  state.panX += dx; state.panY += dy; state.pointerX = event.clientX; state.pointerY = event.clientY;
+  clampPan(); applyView();
+});
+imageFrame.addEventListener("pointerup", event => {
+  const wasGesture = state.gesture, wasDragging = state.dragging;
+  state.pointers.delete(event.pointerId);
+  if (wasGesture) {
+    state.dragging = false;
+    if (state.pointers.size === 0) { state.gesture = false; state.moved = false; state.pinchMidpoint = null; }
+    return;
+  }
+  state.dragging = false;
+  if (!wasDragging || !state.moved) handleGuess(event);
+  setTimeout(() => state.moved = false, 0);
+});
+imageFrame.addEventListener("pointercancel", event => {
+  state.pointers.delete(event.pointerId);
+  if (state.pointers.size === 0) { state.gesture = false; state.dragging = false; state.moved = false; }
+});
+imageFrame.addEventListener("wheel", event => { event.preventDefault(); zoomAt(state.scale + (event.deltaY < 0 ? .25 : -.25), event.clientX, event.clientY); }, { passive: false });
 window.addEventListener("resize", fitStage);
 
 renderHome();
