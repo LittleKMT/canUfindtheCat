@@ -74,6 +74,7 @@ function startLevel(index) {
   updateHearts(); updateHints();
   $("#loadingCard").classList.remove("is-hidden");
   puzzleImage.onload = () => {
+    fitStage();
     $("#loadingCard").classList.add("is-hidden");
     state.startedAt = Date.now(); startTimer();
   };
@@ -156,11 +157,39 @@ function useHint() {
   setTimeout(() => hintLens.classList.remove("show"), 3300);
 }
 
-function setZoom(value) {
-  state.scale = Math.min(3, Math.max(1, value)); if (state.scale === 1) { state.panX = 0; state.panY = 0; }
+function fitStage() {
+  const side = Math.min(imageFrame.clientWidth, imageFrame.clientHeight);
+  imageStage.style.width = `${side}px`; imageStage.style.height = `${side}px`;
+  imageStage.style.left = `${(imageFrame.clientWidth - side) / 2}px`;
+  imageStage.style.top = `${(imageFrame.clientHeight - side) / 2}px`;
+  clampPan(); applyView();
+}
+function clampPan() {
+  const maxX = Math.max(0, (imageStage.offsetWidth * state.scale - imageFrame.clientWidth) / 2);
+  const maxY = Math.max(0, (imageStage.offsetHeight * state.scale - imageFrame.clientHeight) / 2);
+  state.panX = Math.min(maxX, Math.max(-maxX, state.panX));
+  state.panY = Math.min(maxY, Math.max(-maxY, state.panY));
+}
+function applyView() {
   imageStage.style.transform = `translate(${state.panX}px, ${state.panY}px) scale(${state.scale})`;
 }
-function resetView() { state.scale = 1; state.panX = 0; state.panY = 0; imageStage.style.transform = ""; }
+function setZoom(value) {
+  state.scale = Math.min(3, Math.max(1, value));
+  if (state.scale === 1) { state.panX = 0; state.panY = 0; }
+  clampPan(); applyView();
+}
+function exploreZoom() {
+  if (state.scale > 1) { setZoom(state.scale + .5); return; }
+  const target = levels[state.level];
+  const safeX = target.x < .5 ? .78 : .22;
+  const safeY = target.y < .5 ? .78 : .22;
+  state.scale = 3;
+  state.panX = (.5 - safeX) * imageStage.offsetWidth * state.scale;
+  state.panY = (.5 - safeY) * imageStage.offsetHeight * state.scale;
+  clampPan(); applyView();
+  toast("Zoomed to another area — drag slowly to explore");
+}
+function resetView() { state.scale = 1; state.panX = 0; state.panY = 0; fitStage(); }
 
 function toast(message) { const el = $("#toast"); el.textContent = message; el.classList.add("show"); clearTimeout(toast.timer); toast.timer = setTimeout(() => el.classList.remove("show"), 1800); }
 function tone(type) {
@@ -178,7 +207,7 @@ $("#playButton").addEventListener("click", () => startLevel(Math.min(state.unloc
 $("#levelsButton").addEventListener("click", renderLevels);
 document.querySelectorAll('[data-action="home"]').forEach(button => button.addEventListener("click", () => { resetView(); renderHome(); showScreen("startScreen"); }));
 $("#hintButton").addEventListener("click", useHint);
-$("#zoomIn").addEventListener("click", () => setZoom(state.scale + .5));
+$("#zoomIn").addEventListener("click", exploreZoom);
 $("#zoomOut").addEventListener("click", () => setZoom(state.scale - .5));
 $("#zoomReset").addEventListener("click", resetView);
 $("#nextButton").addEventListener("click", () => { hideResult(); startLevel(state.level === levels.length-1 ? 0 : state.level+1); });
@@ -188,7 +217,8 @@ $("#startSoundButton").addEventListener("click", () => { state.sound=!state.soun
 imageFrame.addEventListener("pointerdown", event => { state.dragging = state.scale > 1; state.moved = false; state.pointerX = event.clientX; state.pointerY = event.clientY; if (state.dragging) imageFrame.setPointerCapture(event.pointerId); });
 imageFrame.addEventListener("pointermove", event => { if (!state.dragging) return; const dx=event.clientX-state.pointerX, dy=event.clientY-state.pointerY; if (Math.abs(dx)+Math.abs(dy)>3) state.moved=true; state.panX += dx; state.panY += dy; state.pointerX=event.clientX; state.pointerY=event.clientY; setZoom(state.scale); });
 imageFrame.addEventListener("pointerup", event => { const wasDragging=state.dragging; state.dragging=false; if (!wasDragging || !state.moved) handleGuess(event); setTimeout(()=>state.moved=false,0); });
-imageFrame.addEventListener("dblclick", event => { event.preventDefault(); setZoom(state.scale > 1 ? 1 : 2); });
+imageFrame.addEventListener("dblclick", event => { event.preventDefault(); state.scale > 1 ? resetView() : exploreZoom(); });
 imageFrame.addEventListener("wheel", event => { event.preventDefault(); setZoom(state.scale + (event.deltaY < 0 ? .25 : -.25)); }, { passive: false });
+window.addEventListener("resize", fitStage);
 
 renderHome();
