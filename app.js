@@ -66,7 +66,7 @@ function renderLevels() {
 function startLevel(index) {
   state.level = index; state.hearts = 3; state.hints = 3; state.solved = false; state.elapsed = 0;
   resetView(); save(); showScreen("gameScreen");
-  $("#levelLabel").textContent = `LEVEL ${index + 1} · ${levels[index].name.toUpperCase()}`;
+  $("#levelLabel").textContent = `LEVEL ${index + 1}`;
   $("#progressFill").style.width = `${(index / levels.length) * 100}%`;
   answerRing.classList.remove("show"); hintLens.classList.remove("show");
   placeMarker(answerRing); placeMarker(hintLens);
@@ -157,7 +157,7 @@ function useHint() {
 }
 
 function fitStage() {
-  const side = Math.min(imageFrame.clientWidth, imageFrame.clientHeight);
+  const side = Math.max(imageFrame.clientWidth, imageFrame.clientHeight);
   imageStage.style.width = `${side}px`; imageStage.style.height = `${side}px`;
   imageStage.style.left = `${(imageFrame.clientWidth - side) / 2}px`;
   imageStage.style.top = `${(imageFrame.clientHeight - side) / 2}px`;
@@ -173,8 +173,9 @@ function applyView() {
   imageStage.style.transform = `translate(${state.panX}px, ${state.panY}px) scale(${state.scale})`;
 }
 function setZoom(value) {
+  const previousScale = state.scale;
   state.scale = Math.min(3, Math.max(1, value));
-  if (state.scale === 1) { state.panX = 0; state.panY = 0; }
+  if (state.scale === 1 && previousScale > 1) { state.panX = 0; state.panY = 0; }
   clampPan(); applyView();
 }
 function exploreZoom() {
@@ -213,7 +214,7 @@ $("#nextButton").addEventListener("click", () => { hideResult(); startLevel(stat
 $("#resultLevelsButton").addEventListener("click", () => { hideResult(); renderLevels(); });
 $("#startSoundButton").addEventListener("click", () => { state.sound=!state.sound; localStorage.setItem("cat-sound",state.sound?"on":"off"); renderHome(); tone("hint"); });
 
-imageFrame.addEventListener("pointerdown", event => { state.dragging = state.scale > 1; state.moved = false; state.pointerX = event.clientX; state.pointerY = event.clientY; if (state.dragging) imageFrame.setPointerCapture(event.pointerId); });
+imageFrame.addEventListener("pointerdown", event => { const canPan = imageStage.offsetWidth * state.scale > imageFrame.clientWidth + 1 || imageStage.offsetHeight * state.scale > imageFrame.clientHeight + 1; state.dragging = canPan; state.moved = false; state.pointerX = event.clientX; state.pointerY = event.clientY; if (state.dragging) imageFrame.setPointerCapture(event.pointerId); });
 imageFrame.addEventListener("pointermove", event => { if (!state.dragging) return; const dx=event.clientX-state.pointerX, dy=event.clientY-state.pointerY; if (Math.abs(dx)+Math.abs(dy)>3) state.moved=true; state.panX += dx; state.panY += dy; state.pointerX=event.clientX; state.pointerY=event.clientY; setZoom(state.scale); });
 imageFrame.addEventListener("pointerup", event => { const wasDragging=state.dragging; state.dragging=false; if (!wasDragging || !state.moved) handleGuess(event); setTimeout(()=>state.moved=false,0); });
 imageFrame.addEventListener("dblclick", event => { event.preventDefault(); state.scale > 1 ? resetView() : exploreZoom(); });

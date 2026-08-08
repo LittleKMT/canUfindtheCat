@@ -50,14 +50,9 @@
             <span id="levelLabel">LEVEL 1</span>
             <div class="progress-track"><i id="progressFill"></i></div>
           </div>
+          <div class="timer" id="timer">00:00</div>
           <div class="hearts" id="hearts" aria-label="3 lives"></div>
         </header>
-
-        <div class="mission-row">
-          <div class="mission-cat" aria-hidden="true">🐱</div>
-          <div><span>Your mission</span><strong>Find the hidden cat!</strong></div>
-          <div class="timer" id="timer">00:00</div>
-        </div>
 
         <div class="puzzle-wrap">
           <div class="image-frame" id="imageFrame">
@@ -68,16 +63,16 @@
             </div>
             <div class="loading-card" id="loadingCard"><span class="loader"></span><b>Preparing puzzle…</b></div>
           </div>
+        </div>
+
+        <div class="game-actions">
+          <button class="hint-button" id="hintButton"><span>⌕</span><b>Hint</b><small id="hintCount">3 left</small></button>
+          <p>Drag to explore · Tap the cat</p>
           <div class="zoom-controls" aria-label="Zoom controls">
             <button id="zoomOut" aria-label="Zoom out">−</button>
             <button id="zoomReset" aria-label="Reset zoom">⌾</button>
             <button id="zoomIn" aria-label="Zoom in">＋</button>
           </div>
-        </div>
-
-        <div class="game-actions">
-          <button class="hint-button" id="hintButton"><span>⌕</span><b>Hint</b><small id="hintCount">3 left</small></button>
-          <p>Tap the picture where you see the cat</p>
         </div>
       </section>
     </main>
