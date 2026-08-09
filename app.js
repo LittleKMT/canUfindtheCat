@@ -32,10 +32,41 @@ const levels = [
   { file: "dark-16", name: "Parcel Sorting Maze", cats: [
     {x:.5478,y:.1385,hitX:.021,hitY:.021,clipX:.024,clipY:.023},{x:.2325,y:.3742,hitX:.021,hitY:.021,clipX:.024,clipY:.023},{x:.7293,y:.4761,hitX:.021,hitY:.021,clipX:.024,clipY:.023},{x:.4076,y:.7739,hitX:.021,hitY:.025,clipX:.024,clipY:.028}] },
   { file: "dark-17", name: "Turbine Workshop", cats: [
-    {x:.7277,y:.2182,hitX:.023,hitY:.026,clipX:.026,clipY:.029},{x:.5175,y:.3885,hitX:.023,hitY:.027,clipX:.026,clipY:.030},{x:.1067,y:.4204,hitX:.023,hitY:.025,clipX:.026,clipY:.028},{x:.6815,y:.7611,hitX:.028,hitY:.044,clipX:.031,clipY:.047}] }
+    {x:.7277,y:.2182,hitX:.023,hitY:.026,clipX:.026,clipY:.029},{x:.5175,y:.3885,hitX:.023,hitY:.027,clipX:.026,clipY:.030},{x:.1067,y:.4204,hitX:.023,hitY:.025,clipX:.026,clipY:.028},{x:.6815,y:.7611,hitX:.028,hitY:.044,clipX:.031,clipY:.047}] },
+  { file: "classic-01", name: "Birdhouse Village", isColor: true, cats: [
+    {x:.665,y:.548,hitX:.024,hitY:.025,clipX:.032,clipY:.034}] },
+  { file: "classic-02", name: "Sushi Parade", isColor: true, cats: [
+    {x:.400,y:.600,hitX:.055,hitY:.027,clipX:.070,clipY:.038}] },
+  { file: "classic-03", name: "Pixel Robot Factory", isColor: true, cats: [
+    {x:.9079,y:.3820,hitX:.022,hitY:.032,clipX:.030,clipY:.041}] },
+  { file: "classic-04", name: "Garden Greenhouse", isColor: true, cats: [
+    {x:.6707,y:.4486,hitX:.026,hitY:.030,clipX:.034,clipY:.038}] },
+  { file: "classic-05", name: "Toy Market", isColor: true, cats: [
+    {x:.205,y:.160,hitX:.050,hitY:.060,clipX:.064,clipY:.075}] },
+  { file: "classic-06", name: "Paper Harbor", isColor: true, cats: [
+    {x:.806,y:.859,hitX:.040,hitY:.045,clipX:.052,clipY:.057}] },
+  { file: "classic-07", name: "Secret Library", isColor: true, cats: [
+    {x:.1487,y:.5339,hitX:.020,hitY:.050,clipX:.028,clipY:.061}] },
+  { file: "classic-08", name: "Owl Crowd", isColor: true, cats: [
+    {x:.890,y:.180,hitX:.040,hitY:.055,clipX:.052,clipY:.070}] },
+  { file: "classic-09", name: "Blue Owl Crowd", isColor: true, cats: [
+    {x:.1746,y:.8305,hitX:.045,hitY:.065,clipX:.058,clipY:.078}] },
+  { file: "classic-10", name: "Festival Owl Crowd", isColor: true, cats: [
+    {x:.925,y:.530,hitX:.040,hitY:.080,clipX:.052,clipY:.100}] },
+  { file: "classic-11", name: "Antique Map Room", isColor: true, cats: [
+    {x:.2927,y:.1407,hitX:.025,hitY:.060,clipX:.034,clipY:.076}] },
+  { file: "classic-12", name: "Midnight Observatory", isColor: true, cats: [
+    {x:.820,y:.830,hitX:.035,hitY:.045,clipX:.046,clipY:.058}] },
+  { file: "classic-13", name: "Botanical Curiosity Room", isColor: true, cats: [
+    {x:.8907,y:.3620,hitX:.025,hitY:.055,clipX:.034,clipY:.068}] },
+  { file: "classic-14", name: "Modern Art Studio", isColor: true, cats: [
+    {x:.145,y:.170,hitX:.035,hitY:.025,clipX:.046,clipY:.034}] },
+  { file: "classic-15", name: "Robotics Workshop", isColor: true, cats: [
+    {x:.900,y:.770,hitX:.025,hitY:.045,clipX:.034,clipY:.058}] }
 ].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
-const CONTENT_VERSION = "seventeen-four-cat-levels-v5";
+const CONTENT_VERSION = "thirty-two-mixed-levels-v6";
+const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
 if (localStorage.getItem("cat-content-version") !== CONTENT_VERSION) {
   localStorage.setItem("cat-content-version", CONTENT_VERSION);
 }
@@ -95,7 +126,7 @@ function renderLevels() {
   grid.innerHTML = levels.map((level, index) => {
     const locked = index > state.unlocked;
     const stars = state.scores[index]?.stars || 0;
-    return `<button class="level-card ${locked ? "locked" : ""}" data-level="${index}" ${locked ? "disabled" : ""} aria-label="Level ${index + 1}: ${level.name}${locked ? ", locked" : ""}">
+    return `<button class="level-card ${level.isColor ? "color-level-card" : ""} ${locked ? "locked" : ""}" data-level="${index}" ${locked ? "disabled" : ""} aria-label="Level ${index + 1}: ${level.name}${locked ? ", locked" : ""}">
       <img src="${level.image}" alt="" loading="lazy"><span class="number">${index + 1}</span><span class="level-stars">${"★".repeat(stars)}${"☆".repeat(3-stars)}</span>
     </button>`;
   }).join("");
@@ -105,10 +136,12 @@ function renderLevels() {
 }
 
 function startLevel(index) {
+  const level = levels[index];
   state.level = index; state.hearts = 5; state.hints = 3; state.solved = false; state.elapsed = 0; state.found = new Set();
+  document.body.classList.toggle("color-level", Boolean(level.isColor));
   resetView(); save(); showScreen("gameScreen");
   $("#levelLabel").textContent = `LEVEL ${index + 1}`;
-  $("#progressFill").style.width = "0%"; $("#catProgress").textContent = "0 / 4";
+  $("#progressFill").style.width = "0%"; $("#catProgress").textContent = `0 / ${level.cats.length}`;
   foundCats.innerHTML = ""; hintLens.classList.remove("show");
   updateHearts(); updateHints();
   $("#loadingCard").classList.remove("is-hidden");
@@ -117,10 +150,10 @@ function startLevel(index) {
     $("#loadingCard").classList.add("is-hidden");
     state.startedAt = Date.now(); startTimer();
   };
-  puzzleImage.src = levels[index].image;
-  puzzleImage.alt = `Level ${index + 1}: ${levels[index].name}. Find four hidden cats.`;
+  puzzleImage.src = level.image;
+  puzzleImage.alt = `Level ${index + 1}: ${level.name}. Find ${level.cats.length === 1 ? "the hidden cat" : `${level.cats.length} hidden cats`}.`;
   if (puzzleImage.complete) puzzleImage.onload();
-  new Image().src = levels[index].answer;
+  new Image().src = level.answer;
   const next = levels[index + 1]; if (next) { new Image().src = next.image; new Image().src = next.answer; }
 }
 
@@ -185,7 +218,8 @@ function wrongGuess(x, y) {
   state.hearts--; updateHearts(); tone("wrong");
   const mark = document.createElement("i"); mark.className = "miss-mark"; mark.style.left = `${x}px`; mark.style.top = `${y}px`; document.body.append(mark); setTimeout(() => mark.remove(), 600);
   if (state.hearts <= 0) {
-    revealAllCats(); toast("The four cats are orange — try again!"); stopTimer();
+    const total = levels[state.level].cats.length;
+    revealAllCats(); toast(`${total === 1 ? "The cat is" : "All cats are"} orange — try again!`); stopTimer();
     setTimeout(() => startLevel(state.level), 2100);
   } else toast(state.hearts === 1 ? "Careful — one heart left!" : "Not there. Keep looking!");
 }
@@ -204,8 +238,9 @@ function showResult(stars) {
   $("#resultTime").textContent = formatTime(state.elapsed);
   $("#resultStars").textContent = "★".repeat(stars) + "☆".repeat(3-stars);
   const last = state.level === levels.length - 1;
-  $("#resultTitle").textContent = last ? "You found all 68 cats!" : "All four cats found!";
-  $("#resultMessage").textContent = last ? "Every hidden cat is glowing orange." : ["Four perfect finds — sharp eyes!","Meow-nificent detective work!","Every cat has turned orange!"][state.level % 3];
+  const total = levels[state.level].cats.length;
+  $("#resultTitle").textContent = last ? `You found all ${TOTAL_CATS} cats!` : total === 1 ? "Cat found!" : `All ${total} cats found!`;
+  $("#resultMessage").textContent = last ? "Every hidden cat is glowing orange." : total === 1 ? "That hidden cat has turned orange!" : ["Perfect finds — sharp eyes!","Meow-nificent detective work!","Every cat has turned orange!"][state.level % 3];
   $("#nextButton span").textContent = last ? "Play again" : "Next level";
   $("#successModal").classList.add("show"); $("#successModal").setAttribute("aria-hidden", "false");
 }

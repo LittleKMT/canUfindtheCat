@@ -1,6 +1,6 @@
 # Can You Find the Cat?
 
-A mobile-friendly hidden-object game built from seventeen original monochrome picture puzzles, with four cats in each scene.
+A mobile-friendly hidden-object game built from 32 original picture puzzles with 83 hidden cats.
 
 ## Play
 
@@ -8,8 +8,9 @@ Open the GitHub Pages URL shown in the repository details.
 
 ## Features
 
-- 17 monochrome levels, 4 cats per level, and five-heart scoring
-- Each found cat changes from gray to orange
+- 17 monochrome four-cat levels plus 15 colorful classic levels
+- 83 hidden cats in total with five-heart scoring
+- Only the cat you find changes to orange
 - Switch between black-background/white-line and white-background/black-line views
 - Hint lens, pinch zoom, pan, and reset view
 - Responsive phone and desktop layout

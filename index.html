@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=6e" />
   </head>
   <body>
     <main class="app-shell">
@@ -26,12 +26,12 @@
           </div>
           <p class="eyebrow">A tiny mystery awaits</p>
           <h1 id="gameTitle">Can You<br /><span>Find the Cat?</span></h1>
-          <p class="hero-copy">Look closely. Find all four hidden cats before your hearts run out!</p>
+          <p class="hero-copy">Look closely. Find every hidden cat before your hearts run out!</p>
           <button class="primary-button" id="playButton"><span>Play now</span><b>→</b></button>
           <button class="text-button" id="levelsButton">Choose a level</button>
           <div class="continue-note" id="continueNote"></div>
         </div>
-        <p class="footer-note">17 monochrome puzzles · 4 cats in each</p>
+        <p class="footer-note">32 original puzzles · 83 hidden cats</p>
       </section>
 
       <section class="level-screen screen" id="levelScreen" aria-label="Level selection">
@@ -47,7 +47,7 @@
         <header class="game-header">
           <button class="icon-button" data-action="home" aria-label="Back to home">⌂</button>
           <div class="level-heading">
-            <div class="level-title-row"><span id="levelLabel">LEVEL 1</span><b id="catProgress">0 / 4</b></div>
+            <div class="level-title-row"><span id="levelLabel">LEVEL 1</span><b id="catProgress">0 / ?</b></div>
             <div class="progress-track"><i id="progressFill"></i></div>
           </div>
           <div class="timer" id="timer">00:00</div>
@@ -67,7 +67,7 @@
 
         <div class="game-actions">
           <button class="hint-button" id="hintButton"><span>⌕</span><b>Hint</b><small id="hintCount">3 left</small></button>
-          <p>Pinch to zoom · Find all 4 cats</p>
+          <p>Pinch to zoom · Find every cat</p>
           <div class="action-tools">
             <div class="palette-switch" role="group" aria-label="Picture colors">
               <button data-palette="dark" aria-pressed="true"><span>●</span><b>Dark</b></button>
@@ -87,7 +87,7 @@
       <section class="result-card" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
         <div class="result-burst">★</div>
         <p class="eyebrow">Great eyes!</p>
-        <h2 id="resultTitle">All four cats found!</h2>
+        <h2 id="resultTitle">Cat found!</h2>
         <p id="resultMessage">That was a sneaky hiding spot.</p>
         <div class="result-stats"><div><span>Time</span><b id="resultTime">00:00</b></div><div><span>Stars</span><b id="resultStars">★★★</b></div></div>
         <button class="primary-button" id="nextButton"><span>Next level</span><b>→</b></button>
@@ -95,6 +95,6 @@
       </section>
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=6e"></script>
   </body>
 </html>
