@@ -62,10 +62,16 @@ const levels = [
   { file: "classic-14", name: "Modern Art Studio", isColor: true, cats: [
     {x:.145,y:.170,hitX:.035,hitY:.025,clipX:.046,clipY:.034}] },
   { file: "classic-15", name: "Robotics Workshop", isColor: true, cats: [
-    {x:.900,y:.770,hitX:.025,hitY:.045,clipX:.034,clipY:.058}] }
+    {x:.900,y:.770,hitX:.025,hitY:.045,clipX:.034,clipY:.058}] },
+  { file: "hard-01", name: "Midnight Rail Signals", cats: [
+    {x:.9733,y:.4833,hitX:.011,hitY:.010,clipX:.013,clipY:.012},{x:.2823,y:.5554,hitX:.011,hitY:.010,clipX:.013,clipY:.012},{x:.1898,y:.3545,hitX:.010,hitY:.009,clipX:.012,clipY:.011},{x:.5092,y:.8700,hitX:.010,hitY:.009,clipX:.012,clipY:.011}] },
+  { file: "hard-02", name: "Vertical Hydroponics", cats: [
+    {x:.6595,y:.4378,hitX:.015,hitY:.015,clipX:.017,clipY:.017},{x:.0251,y:.6523,hitX:.012,hitY:.012,clipX:.014,clipY:.014},{x:.7364,y:.5004,hitX:.014,hitY:.014,clipX:.016,clipY:.016},{x:.4382,y:.1284,hitX:.013,hitY:.011,clipX:.015,clipY:.013}] },
+  { file: "hard-03", name: "Deep Engine Room", cats: [
+    {x:.2018,y:.2010,hitX:.013,hitY:.011,clipX:.015,clipY:.013},{x:.8329,y:.4709,hitX:.013,hitY:.011,clipX:.015,clipY:.013},{x:.5112,y:.4533,hitX:.012,hitY:.010,clipX:.014,clipY:.012},{x:.9669,y:.8541,hitX:.012,hitY:.011,clipX:.014,clipY:.013}] }
 ].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
-const CONTENT_VERSION = "thirty-two-mixed-levels-v6";
+const CONTENT_VERSION = "thirty-five-mixed-levels-v7";
 const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
 if (localStorage.getItem("cat-content-version") !== CONTENT_VERSION) {
   localStorage.setItem("cat-content-version", CONTENT_VERSION);
