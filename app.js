@@ -1,4 +1,4 @@
-const levels = [
+const levelCatalog = [
   { file: "dark-01", name: "Midnight Market", cats: [
     {x:.1192,y:.0969,hitX:.035,hitY:.039,clipX:.038,clipY:.043},{x:.8788,y:.2632,hitX:.070,hitY:.045,clipX:.072,clipY:.047},{x:.1603,y:.7915,hitX:.058,hitY:.064,clipX:.060,clipY:.067},{x:.8254,y:.8317,hitX:.067,hitY:.058,clipX:.069,clipY:.060}] },
   { file: "dark-02", name: "Future Station", cats: [
@@ -91,9 +91,39 @@ const levels = [
     {x:.130,y:.080,hitX:.045,hitY:.060,clipX:.055,clipY:.070},{x:.440,y:.230,hitX:.045,hitY:.050,clipX:.055,clipY:.060},{x:.920,y:.220,hitX:.055,hitY:.075,clipX:.065,clipY:.085},{x:.160,y:.390,hitX:.050,hitY:.065,clipX:.060,clipY:.075},{x:.720,y:.430,hitX:.050,hitY:.060,clipX:.060,clipY:.070},{x:.100,y:.570,hitX:.055,hitY:.050,clipX:.065,clipY:.060},{x:.880,y:.580,hitX:.050,hitY:.050,clipX:.060,clipY:.060},{x:.200,y:.760,hitX:.055,hitY:.075,clipX:.065,clipY:.085},{x:.460,y:.750,hitX:.050,hitY:.060,clipX:.060,clipY:.070},{x:.870,y:.820,hitX:.050,hitY:.055,clipX:.060,clipY:.065}] }
 ].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
-const CONTENT_VERSION = "forty-five-mixed-levels-v8";
+// Fixed shuffle: varied on first load, stable across refreshes so saved progress stays meaningful.
+const LEVEL_ORDER = [
+  "classic-08", "dark-03", "ten-04", "classic-02", "hard-02",
+  "ten-09", "dark-11", "classic-13", "dark-06", "ten-01",
+  "hard-03", "classic-05", "ten-06", "dark-15", "classic-11",
+  "dark-01", "ten-10", "dark-12", "classic-01", "dark-08",
+  "ten-03", "classic-15", "hard-01", "ten-08", "dark-17",
+  "classic-04", "dark-04", "ten-05", "dark-10", "classic-09",
+  "ten-02", "dark-02", "classic-06", "dark-16", "ten-07",
+  "dark-07", "classic-12", "dark-14", "classic-03", "classic-14",
+  "dark-05", "classic-07", "dark-13", "classic-10", "dark-09"
+];
+const levelByFile = new Map(levelCatalog.map(level => [level.file, level]));
+const levels = LEVEL_ORDER.map(file => levelByFile.get(file));
+
+const CONTENT_VERSION = "forty-five-interleaved-levels-v9";
 const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
-if (localStorage.getItem("cat-content-version") !== CONTENT_VERSION) {
+const previousContentVersion = localStorage.getItem("cat-content-version");
+if (previousContentVersion !== CONTENT_VERSION) {
+  const oldScores = JSON.parse(localStorage.getItem("cat-scores") || "{}");
+  const scoresByFile = {};
+  Object.entries(oldScores).forEach(([index, score]) => {
+    const file = levelCatalog[Number(index)]?.file;
+    if (file) scoresByFile[file] = score;
+  });
+  const remappedScores = {};
+  levels.forEach((level, index) => {
+    if (scoresByFile[level.file]) remappedScores[index] = scoresByFile[level.file];
+  });
+  const completedCount = Object.keys(remappedScores).length;
+  localStorage.setItem("cat-scores", JSON.stringify(remappedScores));
+  localStorage.setItem("cat-current", String(Math.min(completedCount, levels.length - 1)));
+  localStorage.setItem("cat-unlocked", String(Math.min(completedCount, levels.length - 1)));
   localStorage.setItem("cat-content-version", CONTENT_VERSION);
 }
 
