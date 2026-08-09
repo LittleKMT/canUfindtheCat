@@ -28,10 +28,14 @@ const levels = [
   { file: "dark-14", name: "Laundry Laboratory", cats: [
     {x:.1592,y:.2850,hitX:.0637,hitY:.0398,clipX:.072,clipY:.048},{x:.8201,y:.3742,hitX:.0621,hitY:.0653,clipX:.071,clipY:.074},{x:.4427,y:.4506,hitX:.0541,hitY:.0780,clipX:.063,clipY:.087},{x:.4475,y:.8328,hitX:.0876,hitY:.0525,clipX:.096,clipY:.061}] },
   { file: "dark-15", name: "Arcade Repair Shop", cats: [
-    {x:.6943,y:.2484,hitX:.0541,hitY:.0414,clipX:.063,clipY:.050},{x:.3439,y:.3392,hitX:.0478,hitY:.0621,clipX:.056,clipY:.071},{x:.7134,y:.6497,hitX:.0541,hitY:.0478,clipX:.063,clipY:.056},{x:.1576,y:.7006,hitX:.0589,hitY:.0796,clipX:.067,clipY:.088}] }
+    {x:.6943,y:.2484,hitX:.0541,hitY:.0414,clipX:.063,clipY:.050},{x:.3439,y:.3392,hitX:.0478,hitY:.0621,clipX:.056,clipY:.071},{x:.7134,y:.6497,hitX:.0541,hitY:.0478,clipX:.063,clipY:.056},{x:.1576,y:.7006,hitX:.0589,hitY:.0796,clipX:.067,clipY:.088}] },
+  { file: "dark-16", name: "Parcel Sorting Maze", cats: [
+    {x:.5478,y:.1385,hitX:.021,hitY:.021,clipX:.024,clipY:.023},{x:.2325,y:.3742,hitX:.021,hitY:.021,clipX:.024,clipY:.023},{x:.7293,y:.4761,hitX:.021,hitY:.021,clipX:.024,clipY:.023},{x:.4076,y:.7739,hitX:.021,hitY:.025,clipX:.024,clipY:.028}] },
+  { file: "dark-17", name: "Turbine Workshop", cats: [
+    {x:.7277,y:.2182,hitX:.023,hitY:.026,clipX:.026,clipY:.029},{x:.5175,y:.3885,hitX:.023,hitY:.027,clipX:.026,clipY:.030},{x:.1067,y:.4204,hitX:.023,hitY:.025,clipX:.026,clipY:.028},{x:.6815,y:.7611,hitX:.028,hitY:.044,clipX:.031,clipY:.047}] }
 ].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
-const CONTENT_VERSION = "fifteen-four-cat-levels-v4";
+const CONTENT_VERSION = "seventeen-four-cat-levels-v5";
 if (localStorage.getItem("cat-content-version") !== CONTENT_VERSION) {
   localStorage.setItem("cat-content-version", CONTENT_VERSION);
 }
@@ -200,7 +204,7 @@ function showResult(stars) {
   $("#resultTime").textContent = formatTime(state.elapsed);
   $("#resultStars").textContent = "★".repeat(stars) + "☆".repeat(3-stars);
   const last = state.level === levels.length - 1;
-  $("#resultTitle").textContent = last ? "You found all 60 cats!" : "All four cats found!";
+  $("#resultTitle").textContent = last ? "You found all 68 cats!" : "All four cats found!";
   $("#resultMessage").textContent = last ? "Every hidden cat is glowing orange." : ["Four perfect finds — sharp eyes!","Meow-nificent detective work!","Every cat has turned orange!"][state.level % 3];
   $("#nextButton span").textContent = last ? "Play again" : "Next level";
   $("#successModal").classList.add("show"); $("#successModal").setAttribute("aria-hidden", "false");
