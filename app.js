@@ -129,6 +129,16 @@ const levelCatalog = [
     {x:.130,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.440,y:.110,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.730,y:.180,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.350,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.500,y:.420,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.840,y:.380,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.320,y:.600,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.680,y:.610,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.180,y:.760,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.820,y:.780,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
   ,{ file: "tiny-ink-10", name: "Forest Treehouse Village", cats: [
     {x:.230,y:.130,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.440,y:.170,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.720,y:.200,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.860,y:.320,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.170,y:.430,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.480,y:.380,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.650,y:.480,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.300,y:.620,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.760,y:.690,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.470,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-color-01", name: "Pastry Kitchen", isColor: true, cats: [
+    {x:.140,y:.150,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.400,y:.120,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.670,y:.180,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.870,y:.250,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.400,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.520,y:.420,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.780,y:.490,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.180,y:.660,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.480,y:.730,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.830,y:.820,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-color-02", name: "Canal Flower Market", isColor: true, cats: [
+    {x:.130,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.420,y:.120,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.700,y:.180,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.870,y:.300,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.420,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.520,y:.440,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.780,y:.520,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.180,y:.680,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.480,y:.720,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.830,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-color-03", name: "Seaside Amusement Park", isColor: true, cats: [
+    {x:.150,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.420,y:.130,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.690,y:.180,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.880,y:.300,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.420,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.520,y:.460,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.780,y:.540,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.180,y:.670,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.480,y:.740,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.830,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-color-04", name: "Dragon Library", isColor: true, cats: [
+    {x:.180,y:.120,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.440,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.680,y:.180,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.860,y:.340,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.300,y:.380,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.560,y:.420,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.740,y:.560,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.170,y:.700,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.470,y:.760,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.820,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-color-05", name: "Mini Robot City", isColor: true, cats: [
+    {x:.140,y:.120,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.390,y:.150,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.680,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.860,y:.280,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.380,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.530,y:.430,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.750,y:.540,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.180,y:.670,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.490,y:.730,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.830,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
 ].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
 // Fixed shuffle: varied on first load, stable across refreshes so saved progress stays meaningful.
@@ -156,11 +166,11 @@ const DEPLOYED_LEVEL_ORDER_V10 = [
   "ten-05", "dark-14", "ten-09", "dark-07", "classic-08",
   "dark-12", "classic-15", "dark-17", "classic-02", "dark-09"
 ];
-const LEVEL_ORDER = [...DEPLOYED_LEVEL_ORDER_V10, "tiny-ink-01", "tiny-ink-02", "tiny-ink-03", "tiny-ink-04", "tiny-ink-05", "tiny-ink-06", "tiny-ink-07", "tiny-ink-08", "tiny-ink-09", "tiny-ink-10"];
+const LEVEL_ORDER = [...DEPLOYED_LEVEL_ORDER_V10, "tiny-ink-01", "tiny-ink-02", "tiny-ink-03", "tiny-ink-04", "tiny-ink-05", "tiny-ink-06", "tiny-ink-07", "tiny-ink-08", "tiny-ink-09", "tiny-ink-10", "tiny-color-01", "tiny-color-02", "tiny-color-03", "tiny-color-04", "tiny-color-05"];
 const levelByFile = new Map(levelCatalog.map(level => [level.file, level]));
 const levels = LEVEL_ORDER.map(file => levelByFile.get(file));
 
-const CONTENT_VERSION = "sixty-five-levels-next20-stage2-v11";
+const CONTENT_VERSION = "seventy-levels-next20-stage3-v11";
 const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
 const previousContentVersion = localStorage.getItem("cat-content-version");
 if (previousContentVersion !== CONTENT_VERSION) {

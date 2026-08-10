@@ -14,11 +14,11 @@ Masters: `Find the Cat 圖片/AI生成圖片/next20/`
 | 08 | Crowded Antique Shop | monochrome | done | done | done | done | done |
 | 09 | Rainy Shopping Street | monochrome | done | done | done | done | done |
 | 10 | Forest Treehouse Village | monochrome | done | done | done | done | done |
-| 11 | Pastry Kitchen | color | pending | pending | pending | pending | pending |
-| 12 | Canal Flower Market | color | pending | pending | pending | pending | pending |
-| 13 | Seaside Amusement Park | color | pending | pending | pending | pending | pending |
-| 14 | Dragon Library | color | pending | pending | pending | pending | pending |
-| 15 | Mini Robot City | color | pending | pending | pending | pending | pending |
+| 11 | Pastry Kitchen | color | done | done | done | done | done |
+| 12 | Canal Flower Market | color | done | done | done | done | done |
+| 13 | Seaside Amusement Park | color | done | done | done | done | done |
+| 14 | Dragon Library | color | done | done | done | done | done |
+| 15 | Mini Robot City | color | done | done | done | done | done |
 | 16 | Farm Tool Barn | color | pending | pending | pending | pending | pending |
 | 17 | Superhero Prop Room | color | pending | pending | pending | pending | pending |
 | 18 | Tropical Greenhouse | color | pending | pending | pending | pending | pending |
