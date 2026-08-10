@@ -277,7 +277,7 @@ function applyPalette(palette) {
 function renderLevels() {
   const grid = $("#levelGrid");
   grid.innerHTML = levels.map((level, index) => {
-    const locked = index > state.unlocked;
+    const locked = false;
     const stars = state.scores[index]?.stars || 0;
     return `<button class="level-card ${level.isColor ? "color-level-card" : ""} ${locked ? "locked" : ""}" data-level="${index}" ${locked ? "disabled" : ""} aria-label="Level ${index + 1}: ${level.name}${locked ? ", locked" : ""}">
       <img src="${level.image}" alt="" loading="lazy"><span class="number">${index + 1}</span><span class="level-stars">${"★".repeat(stars)}${"☆".repeat(3-stars)}</span>
