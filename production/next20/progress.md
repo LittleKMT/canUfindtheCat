@@ -19,10 +19,10 @@ Masters: `Find the Cat 圖片/AI生成圖片/next20/`
 | 13 | Seaside Amusement Park | color | done | done | done | done | done |
 | 14 | Dragon Library | color | done | done | done | done | done |
 | 15 | Mini Robot City | color | done | done | done | done | done |
-| 16 | Farm Tool Barn | color | pending | pending | pending | pending | pending |
-| 17 | Superhero Prop Room | color | pending | pending | pending | pending | pending |
-| 18 | Tropical Greenhouse | color | pending | pending | pending | pending | pending |
-| 19 | Lunar Weather Station | color | pending | pending | pending | pending | pending |
-| 20 | Night Lantern Market | color | pending | pending | pending | pending | pending |
+| 16 | Farm Tool Barn | color | done | done | done | done | done |
+| 17 | Superhero Prop Room | color | done | done | done | done | done |
+| 18 | Tropical Greenhouse | color | done | done | done | done | done |
+| 19 | Lunar Weather Station | color | done | done | done | done | done |
+| 20 | Night Lantern Market | color | done | done | done | done | done |
 
 Validation rule: every player/answer pair shares one background and one deterministic transparent cat layer; answer differs only by the ten cat colors.

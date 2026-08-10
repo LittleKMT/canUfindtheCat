@@ -139,6 +139,16 @@ const levelCatalog = [
     {x:.180,y:.120,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.440,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.680,y:.180,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.860,y:.340,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.300,y:.380,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.560,y:.420,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.740,y:.560,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.170,y:.700,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.470,y:.760,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.820,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
   ,{ file: "tiny-color-05", name: "Mini Robot City", isColor: true, cats: [
     {x:.140,y:.120,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.390,y:.150,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.680,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.860,y:.280,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.380,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.530,y:.430,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.750,y:.540,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.180,y:.670,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.490,y:.730,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.830,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-color-06", name: "Farm Tool Barn", isColor: true, cats: [
+    {x:.120,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.370,y:.120,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.680,y:.160,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.880,y:.250,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.380,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.550,y:.440,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.780,y:.530,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.180,y:.680,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.480,y:.760,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.820,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-color-07", name: "Superhero Prop Room", isColor: true, cats: [
+    {x:.140,y:.120,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.410,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.700,y:.180,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.880,y:.300,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.230,y:.400,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.540,y:.430,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.760,y:.550,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.180,y:.680,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.490,y:.740,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.840,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-color-08", name: "Tropical Greenhouse", isColor: true, cats: [
+    {x:.130,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.390,y:.130,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.690,y:.170,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.870,y:.280,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.410,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.530,y:.440,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.770,y:.540,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.170,y:.680,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.480,y:.750,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.830,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-color-09", name: "Lunar Weather Station", isColor: true, cats: [
+    {x:.150,y:.130,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.420,y:.120,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.700,y:.180,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.880,y:.300,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.420,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.520,y:.430,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.760,y:.540,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.180,y:.680,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.490,y:.750,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.830,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-color-10", name: "Night Lantern Market", isColor: true, cats: [
+    {x:.140,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.400,y:.130,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.690,y:.180,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.870,y:.300,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.420,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.520,y:.450,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.770,y:.540,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.180,y:.680,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.480,y:.750,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.830,y:.840,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
 ].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
 // Fixed shuffle: varied on first load, stable across refreshes so saved progress stays meaningful.
@@ -166,11 +176,27 @@ const DEPLOYED_LEVEL_ORDER_V10 = [
   "ten-05", "dark-14", "ten-09", "dark-07", "classic-08",
   "dark-12", "classic-15", "dark-17", "classic-02", "dark-09"
 ];
-const LEVEL_ORDER = [...DEPLOYED_LEVEL_ORDER_V10, "tiny-ink-01", "tiny-ink-02", "tiny-ink-03", "tiny-ink-04", "tiny-ink-05", "tiny-ink-06", "tiny-ink-07", "tiny-ink-08", "tiny-ink-09", "tiny-ink-10", "tiny-color-01", "tiny-color-02", "tiny-color-03", "tiny-color-04", "tiny-color-05"];
+const LEVEL_ORDER = [
+  "dark-05", "ten-08", "ink-03", "ten-03", "ink-01",
+  "tiny-color-05", "dark-06", "tiny-color-02", "tiny-ink-07", "classic-03",
+  "dark-01", "classic-12", "dark-14", "tiny-color-04", "tiny-ink-01",
+  "tiny-ink-04", "classic-01", "dark-11", "classic-04", "tiny-ink-05",
+  "tiny-color-01", "dark-15", "tiny-color-03", "tiny-ink-09", "tiny-color-06",
+  "dark-03", "classic-09", "tiny-ink-06", "classic-15", "dark-09",
+  "ink-04", "classic-10", "ink-06", "tiny-color-07", "ink-05",
+  "classic-07", "tiny-ink-02", "ten-02", "tiny-ink-08", "tiny-color-08",
+  "dark-16", "classic-06", "dark-13", "classic-11", "dark-04",
+  "dark-10", "ten-05", "dark-08", "tiny-color-10", "tiny-ink-03",
+  "ten-10", "dark-12", "ten-09", "dark-17", "ten-01",
+  "hard-03", "classic-05", "hard-01", "ten-06", "tiny-ink-10",
+  "dark-07", "ten-07", "ink-10", "classic-14", "dark-02",
+  "ten-04", "ink-07", "classic-08", "ink-02", "tiny-color-09",
+  "hard-02", "classic-02", "ink-09", "classic-13", "ink-08"
+];
 const levelByFile = new Map(levelCatalog.map(level => [level.file, level]));
 const levels = LEVEL_ORDER.map(file => levelByFile.get(file));
 
-const CONTENT_VERSION = "seventy-levels-next20-stage3-v11";
+const CONTENT_VERSION = "seventy-five-interleaved-levels-v11";
 const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
 const previousContentVersion = localStorage.getItem("cat-content-version");
 if (previousContentVersion !== CONTENT_VERSION) {
