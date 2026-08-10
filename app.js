@@ -89,10 +89,30 @@ const levelCatalog = [
     {x:.140,y:.160,hitX:.040,hitY:.055,clipX:.050,clipY:.065},{x:.570,y:.220,hitX:.060,hitY:.050,clipX:.070,clipY:.060},{x:.850,y:.180,hitX:.040,hitY:.060,clipX:.050,clipY:.070},{x:.160,y:.380,hitX:.045,hitY:.055,clipX:.055,clipY:.065},{x:.730,y:.510,hitX:.045,hitY:.065,clipX:.055,clipY:.075},{x:.070,y:.610,hitX:.035,hitY:.050,clipX:.045,clipY:.060},{x:.920,y:.750,hitX:.035,hitY:.045,clipX:.045,clipY:.055},{x:.260,y:.840,hitX:.060,hitY:.060,clipX:.070,clipY:.070},{x:.550,y:.820,hitX:.060,hitY:.060,clipX:.070,clipY:.070},{x:.900,y:.940,hitX:.045,hitY:.055,clipX:.055,clipY:.065}] }
   ,{ file: "ten-10", name: "Jungle Observatory", isColor: true, cats: [
     {x:.130,y:.080,hitX:.045,hitY:.060,clipX:.055,clipY:.070},{x:.440,y:.230,hitX:.045,hitY:.050,clipX:.055,clipY:.060},{x:.920,y:.220,hitX:.055,hitY:.075,clipX:.065,clipY:.085},{x:.160,y:.390,hitX:.050,hitY:.065,clipX:.060,clipY:.075},{x:.720,y:.430,hitX:.050,hitY:.060,clipX:.060,clipY:.070},{x:.100,y:.570,hitX:.055,hitY:.050,clipX:.065,clipY:.060},{x:.880,y:.580,hitX:.050,hitY:.050,clipX:.060,clipY:.060},{x:.200,y:.760,hitX:.055,hitY:.075,clipX:.065,clipY:.085},{x:.460,y:.750,hitX:.050,hitY:.060,clipX:.060,clipY:.070},{x:.870,y:.820,hitX:.050,hitY:.055,clipX:.060,clipY:.065}] }
+  ,{ file: "ink-01", name: "Railway Maintenance Depot", cats: [
+    {x:.234,y:.157,hitX:.035,hitY:.040,clipX:.032,clipY:.045},{x:.223,y:.224,hitX:.035,hitY:.035,clipX:.030,clipY:.035},{x:.878,y:.143,hitX:.035,hitY:.040,clipX:.030,clipY:.045},{x:.823,y:.238,hitX:.035,hitY:.035,clipX:.030,clipY:.035},{x:.934,y:.428,hitX:.035,hitY:.040,clipX:.030,clipY:.040},{x:.170,y:.491,hitX:.035,hitY:.040,clipX:.030,clipY:.040},{x:.613,y:.498,hitX:.035,hitY:.035,clipX:.030,clipY:.035},{x:.500,y:.661,hitX:.035,hitY:.035,clipX:.032,clipY:.035},{x:.888,y:.729,hitX:.035,hitY:.045,clipX:.035,clipY:.050},{x:.247,y:.780,hitX:.040,hitY:.040,clipX:.040,clipY:.040}] }
+  ,{ file: "ink-02", name: "Submarine Control Room", cats: [
+    {x:.915,y:.103,hitX:.035,hitY:.035,clipX:.035,clipY:.030},{x:.113,y:.199,hitX:.030,hitY:.040,clipX:.025,clipY:.040},{x:.940,y:.238,hitX:.035,hitY:.030,clipX:.035,clipY:.025},{x:.702,y:.264,hitX:.030,hitY:.035,clipX:.028,clipY:.030},{x:.471,y:.265,hitX:.035,hitY:.055,clipX:.035,clipY:.055},{x:.933,y:.369,hitX:.035,hitY:.030,clipX:.035,clipY:.025},{x:.827,y:.637,hitX:.030,hitY:.045,clipX:.025,clipY:.045},{x:.511,y:.676,hitX:.035,hitY:.035,clipX:.035,clipY:.030},{x:.297,y:.823,hitX:.035,hitY:.035,clipX:.035,clipY:.035},{x:.814,y:.911,hitX:.035,hitY:.050,clipX:.035,clipY:.050}] }
+  ,{ file: "ink-03", name: "Mechanical Rooftop Greenhouse", cats: [
+    {x:.166,y:.129,hitX:.035,hitY:.030,clipX:.032,clipY:.025},{x:.928,y:.146,hitX:.035,hitY:.045,clipX:.035,clipY:.045},{x:.892,y:.285,hitX:.030,hitY:.040,clipX:.028,clipY:.040},{x:.365,y:.292,hitX:.030,hitY:.035,clipX:.028,clipY:.035},{x:.617,y:.431,hitX:.030,hitY:.060,clipX:.028,clipY:.060},{x:.153,y:.548,hitX:.045,hitY:.045,clipX:.042,clipY:.045},{x:.420,y:.711,hitX:.040,hitY:.045,clipX:.038,clipY:.045},{x:.847,y:.742,hitX:.035,hitY:.040,clipX:.035,clipY:.040},{x:.128,y:.882,hitX:.050,hitY:.045,clipX:.050,clipY:.045},{x:.807,y:.897,hitX:.040,hitY:.040,clipX:.040,clipY:.035}] }
+  ,{ file: "ink-04", name: "Astronomical Observatory Workshop", cats: [
+    {x:.082,y:.146,hitX:.030,hitY:.030,clipX:.028,clipY:.028},{x:.069,y:.327,hitX:.030,hitY:.030,clipX:.025,clipY:.028},{x:.908,y:.363,hitX:.030,hitY:.035,clipX:.030,clipY:.032},{x:.217,y:.460,hitX:.028,hitY:.035,clipX:.022,clipY:.032},{x:.814,y:.471,hitX:.030,hitY:.035,clipX:.028,clipY:.035},{x:.874,y:.523,hitX:.030,hitY:.035,clipX:.028,clipY:.032},{x:.632,y:.798,hitX:.035,hitY:.035,clipX:.035,clipY:.035},{x:.953,y:.815,hitX:.030,hitY:.030,clipX:.028,clipY:.028},{x:.065,y:.851,hitX:.028,hitY:.040,clipX:.025,clipY:.038},{x:.088,y:.918,hitX:.035,hitY:.030,clipX:.035,clipY:.028}] }
+  ,{ file: "ink-05", name: "Clockmaker Workshop", cats: [
+    {x:.110,y:.115,hitX:.025,hitY:.035,clipX:.018,clipY:.032},{x:.743,y:.193,hitX:.025,hitY:.028,clipX:.018,clipY:.025},{x:.419,y:.217,hitX:.025,hitY:.040,clipX:.020,clipY:.038},{x:.957,y:.327,hitX:.025,hitY:.025,clipX:.018,clipY:.020},{x:.192,y:.383,hitX:.025,hitY:.030,clipX:.016,clipY:.028},{x:.524,y:.433,hitX:.025,hitY:.030,clipX:.018,clipY:.028},{x:.763,y:.445,hitX:.025,hitY:.028,clipX:.018,clipY:.025},{x:.559,y:.776,hitX:.028,hitY:.030,clipX:.025,clipY:.028},{x:.886,y:.821,hitX:.025,hitY:.035,clipX:.018,clipY:.032},{x:.033,y:.834,hitX:.028,hitY:.035,clipX:.025,clipY:.035}] }
+  ,{ file: "ink-06", name: "Classical Library Archive", cats: [
+    {x:.085,y:.050,hitX:.028,hitY:.028,clipX:.025,clipY:.025},{x:.832,y:.151,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.290,y:.210,hitX:.025,hitY:.028,clipX:.022,clipY:.025},{x:.961,y:.345,hitX:.025,hitY:.025,clipX:.022,clipY:.020},{x:.599,y:.443,hitX:.024,hitY:.028,clipX:.015,clipY:.025},{x:.172,y:.447,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.835,y:.651,hitX:.025,hitY:.030,clipX:.018,clipY:.028},{x:.224,y:.758,hitX:.028,hitY:.025,clipX:.025,clipY:.022},{x:.687,y:.780,hitX:.028,hitY:.025,clipX:.025,clipY:.022},{x:.890,y:.909,hitX:.025,hitY:.030,clipX:.022,clipY:.030}] }
+  ,{ file: "ink-07", name: "Harbor Crane Warehouse", cats: [
+    {x:.750,y:.108,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.098,y:.139,hitX:.025,hitY:.025,clipX:.020,clipY:.020},{x:.435,y:.215,hitX:.025,hitY:.030,clipX:.022,clipY:.030},{x:.049,y:.420,hitX:.028,hitY:.028,clipX:.025,clipY:.025},{x:.838,y:.450,hitX:.025,hitY:.025,clipX:.018,clipY:.018},{x:.815,y:.565,hitX:.028,hitY:.025,clipX:.025,clipY:.020},{x:.222,y:.594,hitX:.025,hitY:.032,clipX:.020,clipY:.032},{x:.119,y:.678,hitX:.028,hitY:.030,clipX:.025,clipY:.028},{x:.457,y:.781,hitX:.028,hitY:.028,clipX:.025,clipY:.025},{x:.880,y:.882,hitX:.030,hitY:.030,clipX:.030,clipY:.028}] }
+  ,{ file: "ink-08", name: "Orbital Cargo Bay", cats: [
+    {x:.367,y:.107,hitX:.030,hitY:.028,clipX:.028,clipY:.025},{x:.705,y:.160,hitX:.035,hitY:.025,clipX:.032,clipY:.022},{x:.113,y:.170,hitX:.030,hitY:.030,clipX:.028,clipY:.028},{x:.935,y:.381,hitX:.030,hitY:.030,clipX:.028,clipY:.028},{x:.530,y:.506,hitX:.030,hitY:.025,clipX:.028,clipY:.022},{x:.840,y:.519,hitX:.030,hitY:.025,clipX:.028,clipY:.025},{x:.191,y:.548,hitX:.030,hitY:.030,clipX:.030,clipY:.028},{x:.210,y:.732,hitX:.030,hitY:.032,clipX:.028,clipY:.030},{x:.431,y:.805,hitX:.035,hitY:.030,clipX:.035,clipY:.028},{x:.903,y:.917,hitX:.035,hitY:.035,clipX:.032,clipY:.032}] }
+  ,{ file: "ink-09", name: "Grand Theater Backstage", cats: [
+    {x:.393,y:.055,hitX:.025,hitY:.028,clipX:.020,clipY:.025},{x:.117,y:.106,hitX:.025,hitY:.025,clipX:.022,clipY:.020},{x:.672,y:.142,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.915,y:.281,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.189,y:.348,hitX:.025,hitY:.028,clipX:.018,clipY:.025},{x:.500,y:.483,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.879,y:.540,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.132,y:.589,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.508,y:.723,hitX:.025,hitY:.025,clipX:.022,clipY:.020},{x:.895,y:.882,hitX:.028,hitY:.030,clipX:.025,clipY:.028}] }
+  ,{ file: "ink-10", name: "Mountain Weather Station", cats: [
+    {x:.313,y:.101,hitX:.030,hitY:.025,clipX:.028,clipY:.018},{x:.111,y:.114,hitX:.025,hitY:.025,clipX:.020,clipY:.022},{x:.597,y:.215,hitX:.025,hitY:.025,clipX:.018,clipY:.018},{x:.873,y:.276,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.133,y:.449,hitX:.028,hitY:.025,clipX:.025,clipY:.018},{x:.901,y:.488,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.435,y:.532,hitX:.025,hitY:.025,clipX:.018,clipY:.018},{x:.087,y:.728,hitX:.025,hitY:.028,clipX:.022,clipY:.025},{x:.496,y:.759,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.854,y:.903,hitX:.025,hitY:.028,clipX:.022,clipY:.025}] }
 ].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
 // Fixed shuffle: varied on first load, stable across refreshes so saved progress stays meaningful.
-const LEVEL_ORDER = [
+const PREVIOUS_LEVEL_ORDER = [
   "classic-08", "dark-03", "ten-04", "classic-02", "hard-02",
   "ten-09", "dark-11", "classic-13", "dark-06", "ten-01",
   "hard-03", "classic-05", "ten-06", "dark-15", "classic-11",
@@ -103,17 +123,31 @@ const LEVEL_ORDER = [
   "dark-07", "classic-12", "dark-14", "classic-03", "classic-14",
   "dark-05", "classic-07", "dark-13", "classic-10", "dark-09"
 ];
+const LEVEL_ORDER = [
+  "ink-03", "ten-08", "dark-05", "ten-06", "hard-01",
+  "classic-07", "hard-03", "classic-11", "dark-13", "ten-10",
+  "ink-07", "dark-15", "classic-13", "dark-08", "ten-07",
+  "dark-10", "classic-14", "dark-06", "classic-01", "ink-10",
+  "classic-10", "dark-01", "hard-02", "classic-04", "dark-03",
+  "ten-04", "ink-05", "classic-06", "dark-16", "ten-02",
+  "dark-02", "ten-01", "ink-06", "ink-09", "ten-03",
+  "ink-08", "classic-05", "ink-02", "classic-03", "ink-04",
+  "classic-09", "ink-01", "classic-12", "dark-11", "dark-04",
+  "ten-05", "dark-14", "ten-09", "dark-07", "classic-08",
+  "dark-12", "classic-15", "dark-17", "classic-02", "dark-09"
+];
 const levelByFile = new Map(levelCatalog.map(level => [level.file, level]));
 const levels = LEVEL_ORDER.map(file => levelByFile.get(file));
 
-const CONTENT_VERSION = "forty-five-interleaved-levels-v9";
+const CONTENT_VERSION = "fifty-five-interleaved-levels-v10";
 const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
 const previousContentVersion = localStorage.getItem("cat-content-version");
 if (previousContentVersion !== CONTENT_VERSION) {
   const oldScores = JSON.parse(localStorage.getItem("cat-scores") || "{}");
   const scoresByFile = {};
+  const previousOrder = previousContentVersion === "forty-five-interleaved-levels-v9" ? PREVIOUS_LEVEL_ORDER : levelCatalog.map(level => level.file);
   Object.entries(oldScores).forEach(([index, score]) => {
-    const file = levelCatalog[Number(index)]?.file;
+    const file = previousOrder[Number(index)];
     if (file) scoresByFile[file] = score;
   });
   const remappedScores = {};
@@ -295,9 +329,10 @@ function showResult(stars) {
   $("#resultStars").textContent = "★".repeat(stars) + "☆".repeat(3-stars);
   const last = state.level === levels.length - 1;
   const total = levels[state.level].cats.length;
-  $("#resultTitle").textContent = last ? `You found all ${TOTAL_CATS} cats!` : total === 1 ? "Cat found!" : `All ${total} cats found!`;
-  $("#resultMessage").textContent = last ? "Every hidden cat is glowing orange." : total === 1 ? "That hidden cat has turned orange!" : ["Perfect finds — sharp eyes!","Meow-nificent detective work!","Every cat has turned orange!"][state.level % 3];
-  $("#nextButton span").textContent = last ? "Play again" : "Next level";
+  $("#resultTitle").textContent = last ? "Today's puzzles are complete!" : total === 1 ? "Cat found!" : `All ${total} cats found!`;
+  $("#resultMessage").textContent = last ? "You've finished today's puzzles. Would you like to start over?" : total === 1 ? "That hidden cat has turned orange!" : ["Perfect finds — sharp eyes!","Meow-nificent detective work!","Every cat has turned orange!"][state.level % 3];
+  $("#nextButton span").textContent = last ? "Start over" : "Next level";
+  $("#resultLevelsButton").textContent = last ? "Not now" : "All levels";
   $("#successModal").classList.add("show"); $("#successModal").setAttribute("aria-hidden", "false");
 }
 function hideResult() { $("#successModal").classList.remove("show"); $("#successModal").setAttribute("aria-hidden", "true"); }
