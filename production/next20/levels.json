@@ -73,5 +73,80 @@
       {"x": 0.75, "y": 0.75, "size": 0.020, "kind": "peek", "flip": false},
       {"x": 0.17, "y": 0.90, "size": 0.022, "kind": "tail", "flip": true}
     ]
+  },
+  {
+    "id": "06", "file": "tiny-ink-06", "name": "Underground Water Control Room", "color": false,
+    "cats": [
+      {"x": 0.10, "y": 0.18, "size": 0.019, "kind": "ears", "flip": false},
+      {"x": 0.32, "y": 0.15, "size": 0.022, "kind": "tail", "flip": true},
+      {"x": 0.62, "y": 0.15, "size": 0.020, "kind": "peek", "flip": false},
+      {"x": 0.86, "y": 0.20, "size": 0.021, "kind": "face", "flip": true},
+      {"x": 0.23, "y": 0.36, "size": 0.018, "kind": "eyes", "flip": false},
+      {"x": 0.48, "y": 0.43, "size": 0.020, "kind": "peek", "flip": true},
+      {"x": 0.78, "y": 0.44, "size": 0.019, "kind": "ears", "flip": false},
+      {"x": 0.34, "y": 0.66, "size": 0.024, "kind": "side", "flip": true},
+      {"x": 0.69, "y": 0.70, "size": 0.021, "kind": "face", "flip": false},
+      {"x": 0.84, "y": 0.87, "size": 0.022, "kind": "tail", "flip": true}
+    ]
+  },
+  {
+    "id": "07", "file": "tiny-ink-07", "name": "Wizard's Botanical Laboratory", "color": false,
+    "cats": [
+      {"x": 0.17, "y": 0.14, "size": 0.019, "kind": "ears", "flip": true},
+      {"x": 0.42, "y": 0.19, "size": 0.020, "kind": "peek", "flip": false},
+      {"x": 0.72, "y": 0.18, "size": 0.023, "kind": "tail", "flip": true},
+      {"x": 0.85, "y": 0.35, "size": 0.018, "kind": "eyes", "flip": false},
+      {"x": 0.23, "y": 0.40, "size": 0.021, "kind": "face", "flip": true},
+      {"x": 0.55, "y": 0.48, "size": 0.019, "kind": "ears", "flip": false},
+      {"x": 0.74, "y": 0.59, "size": 0.020, "kind": "peek", "flip": true},
+      {"x": 0.17, "y": 0.67, "size": 0.018, "kind": "eyes", "flip": false},
+      {"x": 0.44, "y": 0.77, "size": 0.024, "kind": "side", "flip": true},
+      {"x": 0.83, "y": 0.83, "size": 0.022, "kind": "tail", "flip": false}
+    ]
+  },
+  {
+    "id": "08", "file": "tiny-ink-08", "name": "Crowded Antique Shop", "color": false,
+    "cats": [
+      {"x": 0.18, "y": 0.16, "size": 0.019, "kind": "ears", "flip": false},
+      {"x": 0.42, "y": 0.12, "size": 0.020, "kind": "peek", "flip": true},
+      {"x": 0.70, "y": 0.18, "size": 0.023, "kind": "tail", "flip": false},
+      {"x": 0.85, "y": 0.29, "size": 0.018, "kind": "eyes", "flip": true},
+      {"x": 0.22, "y": 0.37, "size": 0.021, "kind": "face", "flip": false},
+      {"x": 0.48, "y": 0.42, "size": 0.019, "kind": "ears", "flip": true},
+      {"x": 0.65, "y": 0.55, "size": 0.020, "kind": "peek", "flip": false},
+      {"x": 0.15, "y": 0.66, "size": 0.024, "kind": "side", "flip": true},
+      {"x": 0.50, "y": 0.73, "size": 0.018, "kind": "eyes", "flip": false},
+      {"x": 0.84, "y": 0.76, "size": 0.022, "kind": "tail", "flip": true}
+    ]
+  },
+  {
+    "id": "09", "file": "tiny-ink-09", "name": "Rainy Shopping Street", "color": false,
+    "cats": [
+      {"x": 0.13, "y": 0.14, "size": 0.019, "kind": "ears", "flip": true},
+      {"x": 0.44, "y": 0.11, "size": 0.020, "kind": "peek", "flip": false},
+      {"x": 0.73, "y": 0.18, "size": 0.023, "kind": "tail", "flip": true},
+      {"x": 0.22, "y": 0.35, "size": 0.018, "kind": "eyes", "flip": false},
+      {"x": 0.50, "y": 0.42, "size": 0.021, "kind": "face", "flip": true},
+      {"x": 0.84, "y": 0.38, "size": 0.019, "kind": "ears", "flip": false},
+      {"x": 0.32, "y": 0.60, "size": 0.020, "kind": "peek", "flip": true},
+      {"x": 0.68, "y": 0.61, "size": 0.024, "kind": "side", "flip": false},
+      {"x": 0.18, "y": 0.76, "size": 0.018, "kind": "eyes", "flip": true},
+      {"x": 0.82, "y": 0.78, "size": 0.022, "kind": "tail", "flip": false}
+    ]
+  },
+  {
+    "id": "10", "file": "tiny-ink-10", "name": "Forest Treehouse Village", "color": false,
+    "cats": [
+      {"x": 0.23, "y": 0.13, "size": 0.019, "kind": "ears", "flip": false},
+      {"x": 0.44, "y": 0.17, "size": 0.020, "kind": "peek", "flip": true},
+      {"x": 0.72, "y": 0.20, "size": 0.023, "kind": "tail", "flip": false},
+      {"x": 0.86, "y": 0.32, "size": 0.018, "kind": "eyes", "flip": true},
+      {"x": 0.17, "y": 0.43, "size": 0.021, "kind": "face", "flip": false},
+      {"x": 0.48, "y": 0.38, "size": 0.019, "kind": "ears", "flip": true},
+      {"x": 0.65, "y": 0.48, "size": 0.020, "kind": "peek", "flip": false},
+      {"x": 0.30, "y": 0.62, "size": 0.018, "kind": "eyes", "flip": true},
+      {"x": 0.76, "y": 0.69, "size": 0.024, "kind": "side", "flip": false},
+      {"x": 0.47, "y": 0.84, "size": 0.022, "kind": "tail", "flip": true}
+    ]
   }
 ]

@@ -9,11 +9,11 @@ Masters: `Find the Cat 圖片/AI生成圖片/next20/`
 | 03 | Clock Tower Interior | monochrome | done | done | done | done | done |
 | 04 | Spacecraft Repair Bay | monochrome | done | done | done | done | done |
 | 05 | Toy Factory | monochrome | done | done | done | done | done |
-| 06 | Underground Water Control Room | monochrome | pending | pending | pending | pending | pending |
-| 07 | Wizard's Botanical Laboratory | monochrome | pending | pending | pending | pending | pending |
-| 08 | Crowded Antique Shop | monochrome | pending | pending | pending | pending | pending |
-| 09 | Rainy Shopping Street | monochrome | pending | pending | pending | pending | pending |
-| 10 | Forest Treehouse Village | monochrome | pending | pending | pending | pending | pending |
+| 06 | Underground Water Control Room | monochrome | done | done | done | done | done |
+| 07 | Wizard's Botanical Laboratory | monochrome | done | done | done | done | done |
+| 08 | Crowded Antique Shop | monochrome | done | done | done | done | done |
+| 09 | Rainy Shopping Street | monochrome | done | done | done | done | done |
+| 10 | Forest Treehouse Village | monochrome | done | done | done | done | done |
 | 11 | Pastry Kitchen | color | pending | pending | pending | pending | pending |
 | 12 | Canal Flower Market | color | pending | pending | pending | pending | pending |
 | 13 | Seaside Amusement Park | color | pending | pending | pending | pending | pending |
