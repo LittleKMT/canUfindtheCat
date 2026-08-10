@@ -109,10 +109,20 @@ const levelCatalog = [
     {x:.393,y:.055,hitX:.025,hitY:.028,clipX:.020,clipY:.025},{x:.117,y:.106,hitX:.025,hitY:.025,clipX:.022,clipY:.020},{x:.672,y:.142,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.915,y:.281,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.189,y:.348,hitX:.025,hitY:.028,clipX:.018,clipY:.025},{x:.500,y:.483,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.879,y:.540,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.132,y:.589,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.508,y:.723,hitX:.025,hitY:.025,clipX:.022,clipY:.020},{x:.895,y:.882,hitX:.028,hitY:.030,clipX:.025,clipY:.028}] }
   ,{ file: "ink-10", name: "Mountain Weather Station", cats: [
     {x:.313,y:.101,hitX:.030,hitY:.025,clipX:.028,clipY:.018},{x:.111,y:.114,hitX:.025,hitY:.025,clipX:.020,clipY:.022},{x:.597,y:.215,hitX:.025,hitY:.025,clipX:.018,clipY:.018},{x:.873,y:.276,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.133,y:.449,hitX:.028,hitY:.025,clipX:.025,clipY:.018},{x:.901,y:.488,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.435,y:.532,hitX:.025,hitY:.025,clipX:.018,clipY:.018},{x:.087,y:.728,hitX:.025,hitY:.028,clipX:.022,clipY:.025},{x:.496,y:.759,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.854,y:.903,hitX:.025,hitY:.028,clipX:.022,clipY:.025}] }
+  ,{ file: "tiny-ink-01", name: "Old Railway Station", cats: [
+    {x:.140,y:.150,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.220,y:.290,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.290,y:.490,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.550,y:.380,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.730,y:.470,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.910,y:.490,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.520,y:.700,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.760,y:.870,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.100,y:.720,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.420,y:.600,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-ink-02", name: "Rooftop Market", cats: [
+    {x:.250,y:.150,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.700,y:.100,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.300,y:.320,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.580,y:.310,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.820,y:.470,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.400,y:.700,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.600,y:.680,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.200,y:.780,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.720,y:.750,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.150,y:.900,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-ink-03", name: "Clock Tower Interior", cats: [
+    {x:.490,y:.220,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.200,y:.220,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.790,y:.310,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.550,y:.450,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.130,y:.550,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.320,y:.690,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.810,y:.660,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.930,y:.550,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.470,y:.910,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.600,y:.770,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-ink-04", name: "Spacecraft Repair Bay", cats: [
+    {x:.210,y:.120,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.480,y:.210,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.580,y:.420,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.120,y:.450,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.870,y:.390,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.450,y:.620,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.630,y:.700,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.860,y:.620,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.240,y:.820,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.930,y:.780,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
+  ,{ file: "tiny-ink-05", name: "Toy Factory", cats: [
+    {x:.160,y:.140,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.690,y:.130,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.300,y:.350,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.900,y:.280,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.550,y:.480,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.250,y:.570,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.580,y:.700,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.290,y:.790,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.750,y:.750,hitX:.026,hitY:.026,clipX:.017,clipY:.017},{x:.170,y:.900,hitX:.026,hitY:.026,clipX:.017,clipY:.017}] }
 ].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
 // Fixed shuffle: varied on first load, stable across refreshes so saved progress stays meaningful.
-const PREVIOUS_LEVEL_ORDER = [
+const V9_LEVEL_ORDER = [
   "classic-08", "dark-03", "ten-04", "classic-02", "hard-02",
   "ten-09", "dark-11", "classic-13", "dark-06", "ten-01",
   "hard-03", "classic-05", "ten-06", "dark-15", "classic-11",
@@ -123,7 +133,7 @@ const PREVIOUS_LEVEL_ORDER = [
   "dark-07", "classic-12", "dark-14", "classic-03", "classic-14",
   "dark-05", "classic-07", "dark-13", "classic-10", "dark-09"
 ];
-const LEVEL_ORDER = [
+const DEPLOYED_LEVEL_ORDER_V10 = [
   "ink-03", "ten-08", "dark-05", "ten-06", "hard-01",
   "classic-07", "hard-03", "classic-11", "dark-13", "ten-10",
   "ink-07", "dark-15", "classic-13", "dark-08", "ten-07",
@@ -136,16 +146,19 @@ const LEVEL_ORDER = [
   "ten-05", "dark-14", "ten-09", "dark-07", "classic-08",
   "dark-12", "classic-15", "dark-17", "classic-02", "dark-09"
 ];
+const LEVEL_ORDER = [...DEPLOYED_LEVEL_ORDER_V10, "tiny-ink-01", "tiny-ink-02", "tiny-ink-03", "tiny-ink-04", "tiny-ink-05"];
 const levelByFile = new Map(levelCatalog.map(level => [level.file, level]));
 const levels = LEVEL_ORDER.map(file => levelByFile.get(file));
 
-const CONTENT_VERSION = "fifty-five-interleaved-levels-v10";
+const CONTENT_VERSION = "sixty-levels-next20-stage1-v11";
 const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
 const previousContentVersion = localStorage.getItem("cat-content-version");
 if (previousContentVersion !== CONTENT_VERSION) {
   const oldScores = JSON.parse(localStorage.getItem("cat-scores") || "{}");
   const scoresByFile = {};
-  const previousOrder = previousContentVersion === "forty-five-interleaved-levels-v9" ? PREVIOUS_LEVEL_ORDER : levelCatalog.map(level => level.file);
+  const storedOrder = JSON.parse(localStorage.getItem("cat-level-order") || "null");
+  const versionOrder = previousContentVersion === "forty-five-interleaved-levels-v9" ? V9_LEVEL_ORDER : previousContentVersion === "fifty-five-interleaved-levels-v10" ? DEPLOYED_LEVEL_ORDER_V10 : null;
+  const previousOrder = storedOrder || versionOrder || levelCatalog.map(level => level.file);
   Object.entries(oldScores).forEach(([index, score]) => {
     const file = previousOrder[Number(index)];
     if (file) scoresByFile[file] = score;
@@ -160,6 +173,7 @@ if (previousContentVersion !== CONTENT_VERSION) {
   localStorage.setItem("cat-unlocked", String(Math.min(completedCount, levels.length - 1)));
   localStorage.setItem("cat-content-version", CONTENT_VERSION);
 }
+localStorage.setItem("cat-level-order", JSON.stringify(LEVEL_ORDER));
 
 const $ = (selector) => document.querySelector(selector);
 const screens = [...document.querySelectorAll(".screen")];
