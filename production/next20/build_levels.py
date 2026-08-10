@@ -19,13 +19,16 @@ def local_color(background: Image.Image, x: float, y: float, color_scene: bool) 
     crop = background.crop((max(0, cx-radius), max(0, cy-radius), min(SIZE, cx+radius), min(SIZE, cy+radius))).convert("RGB")
     pixels = list(crop.getdata())
     med = tuple(round(median(channel)) for channel in zip(*pixels))
+    lum = round(sum(med) / 3)
+    # Keep the body close to its surroundings, while making the defining line
+    # reliably lighter on dark areas and darker on light areas.
     if color_scene:
         fill = med
-        outline = tuple(max(10, min(235, round(v * 0.72))) for v in med)
+        delta = 58 if lum <= 135 else -58
+        outline = tuple(max(12, min(243, value + delta)) for value in med)
     else:
-        lum = round(sum(med) / 3)
-        fill_lum = max(25, min(230, lum))
-        line_lum = max(20, min(225, lum - 38 if lum > 125 else lum + 38))
+        fill_lum = max(22, min(233, lum))
+        line_lum = max(18, min(237, lum + 55 if lum <= 135 else lum - 55))
         fill = (fill_lum,) * 3
         outline = (line_lum,) * 3
     return fill, outline
@@ -35,7 +38,7 @@ def cat_sprite(kind: str, fill: tuple[int, int, int], outline: tuple[int, int, i
     scale = 4
     canvas = Image.new("RGBA", (256, 256), (0, 0, 0, 0))
     d = ImageDraw.Draw(canvas)
-    F = fill + (235,)
+    F = fill + (150,)
     O = outline + (255,)
     w = 12
 
@@ -81,7 +84,10 @@ def cat_sprite(kind: str, fill: tuple[int, int, int], outline: tuple[int, int, i
         line([(29,53),(25,63)], width=8); line([(40,53),(44,63)], width=8)
     if flip:
         canvas = ImageOps.mirror(canvas)
-    return canvas
+    bounds = canvas.getchannel("A").getbbox()
+    if bounds is None:
+        raise ValueError(f"empty cat sprite for kind {kind}")
+    return canvas.crop(bounds)
 
 
 def build_level(level: dict) -> None:
@@ -95,12 +101,14 @@ def build_level(level: dict) -> None:
         fill, outline = local_color(background, cat["x"], cat["y"], level["color"])
         player = cat_sprite(cat["kind"], fill, outline, cat["flip"])
         answer = cat_sprite(cat["kind"], (235,116,24), (104,48,9), cat["flip"])
-        target_h = max(19, round(SIZE * cat["size"]))
-        target_w = target_h
+        target_h = round(SIZE * cat["size"])
+        target_w = round(target_h * player.width / player.height)
         player = player.resize((target_w, target_h), Image.Resampling.LANCZOS)
         answer = answer.resize((target_w, target_h), Image.Resampling.LANCZOS)
         left = round(cat["x"] * SIZE - target_w/2)
         top = round(cat["y"] * SIZE - target_h/2)
+        if left < 0 or top < 0 or left + target_w > SIZE or top + target_h > SIZE:
+            raise ValueError(f"{level_id}: cat at ({cat['x']}, {cat['y']}) crosses the image boundary")
         player_layer.alpha_composite(player, (left, top))
         answer_layer.alpha_composite(answer, (left, top))
 
