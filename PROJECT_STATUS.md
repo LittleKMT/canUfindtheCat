@@ -169,6 +169,12 @@ review the 75-level catalog before doing more expansion.
 - Player and answer assets are 1254 x 1254 and share the same cat geometry.
 - Level 64 uses two approved deterministic hidden-cat additions to reach exactly ten.
 
+### Review rebuild 68-75
+
+- Levels 68-75 (`next-13` through `next-20`) were rebuilt as ten-cat scenes.
+- Player and answer assets are 1254 x 1254 and share the same cat geometry.
+- The completed 59-75 review rebuild now follows the approved level 56-58 standard.
+
 ## Recovery roadmap
 
 1. Define the desired player experience and a small set of puzzle acceptance
