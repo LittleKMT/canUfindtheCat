@@ -141,6 +141,19 @@ review the 75-level catalog before doing more expansion.
   hearts, or hints.
 - Leaving through Home restores normal player mode.
 
+## Artwork repair batch: levels 56-58
+
+- Status: implemented and mobile-verified; included in the current release.
+- `next-01` through `next-03` were rebuilt from their clean scene backgrounds
+  with ten small, distinct cats naturally concealed by scene objects.
+- Rejected pasted-on cat layers are no longer used by these three levels.
+- Player and orange-answer assets share the same ten coordinates; the catalog
+  tap targets were updated to those positions.
+- At 375x812, all thirty targets across levels 56-58 were tapped successfully;
+  each level reached 10/10 with five hearts remaining and no browser errors.
+- Acceptance reference: the friendly cat treatment in early levels, especially
+  levels 16, 20, and 26; normal faces with one black pupil per eye.
+
 ## Recovery roadmap
 
 1. Define the desired player experience and a small set of puzzle acceptance
