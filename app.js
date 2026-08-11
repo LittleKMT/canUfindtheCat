@@ -207,7 +207,7 @@ const DEPLOYED_LEVEL_ORDER_V12 = [
   "dark-02", "ten-04", "ink-07", "classic-08", "ink-02",
   "hard-02", "classic-02", "ink-09", "classic-13", "ink-08"
 ];
-const LEVEL_ORDER = [
+const PREVIOUS_LEVEL_ORDER_V13 = [
   ...DEPLOYED_LEVEL_ORDER_V12,
   "next-01", "next-02", "next-03", "next-04", "next-05",
   "next-06", "next-07", "next-08", "next-09", "next-10",
@@ -215,9 +215,12 @@ const LEVEL_ORDER = [
   "next-16", "next-17", "next-18", "next-19", "next-20"
 ];
 const levelByFile = new Map(levelCatalog.map(level => [level.file, level]));
+const LEVEL_ORDER = [...PREVIOUS_LEVEL_ORDER_V13].sort((left, right) =>
+  levelByFile.get(left).cats.length - levelByFile.get(right).cats.length
+);
 const levels = LEVEL_ORDER.map(file => levelByFile.get(file));
 
-const CONTENT_VERSION = "seventy-five-levels-v13";
+const CONTENT_VERSION = "difficulty-sorted-levels-v14";
 const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
 const previousContentVersion = localStorage.getItem("cat-content-version");
 if (previousContentVersion !== CONTENT_VERSION) {
@@ -230,7 +233,9 @@ if (previousContentVersion !== CONTENT_VERSION) {
       ? DEPLOYED_LEVEL_ORDER_V10
       : previousContentVersion === "fifty-five-levels-v12"
         ? DEPLOYED_LEVEL_ORDER_V12
-        : null;
+        : previousContentVersion === "seventy-five-levels-v13"
+          ? PREVIOUS_LEVEL_ORDER_V13
+          : null;
   const previousOrder = storedOrder || versionOrder || levelCatalog.map(level => level.file);
   Object.entries(oldScores).forEach(([index, score]) => {
     const file = previousOrder[Number(index)];

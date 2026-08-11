@@ -175,6 +175,11 @@ review the 75-level catalog before doing more expansion.
 - Player and answer assets are 1254 x 1254 and share the same cat geometry.
 - The completed 59-75 review rebuild now follows the approved level 56-58 standard.
 
+### Difficulty order
+
+- All 75 levels are sorted by actual cat count: one-cat levels first, four-cat levels next, and ten-cat levels last.
+- Relative order stays stable inside each difficulty group, and saved scores remap by asset ID.
+
 ## Recovery roadmap
 
 1. Define the desired player experience and a small set of puzzle acceptance
