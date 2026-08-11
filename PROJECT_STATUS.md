@@ -154,6 +154,15 @@ review the 75-level catalog before doing more expansion.
 - Acceptance reference: the friendly cat treatment in early levels, especially
   levels 16, 20, and 26; normal faces with one black pupil per eye.
 
+## Artwork repair batch: levels 59-63
+
+- Status: implemented as an interim review deployment while work continues on
+  levels 64-75.
+- `next-04` through `next-08` now use rebuilt player and orange-answer assets,
+  ten reviewed cat coordinates per level, and a cache-busting asset version.
+- The batch follows the approved level 56-58 standard: varied partial poses,
+  scene-object occlusion, clear faces, and no rectangular pasted-cat layers.
+
 ## Recovery roadmap
 
 1. Define the desired player experience and a small set of puzzle acceptance
