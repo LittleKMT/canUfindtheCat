@@ -163,6 +163,12 @@ review the 75-level catalog before doing more expansion.
 - The batch follows the approved level 56-58 standard: varied partial poses,
   scene-object occlusion, clear faces, and no rectangular pasted-cat layers.
 
+### Review rebuild 64-67
+
+- Levels 64-67 (`next-09` through `next-12`) were rebuilt as ten-cat scenes.
+- Player and answer assets are 1254 x 1254 and share the same cat geometry.
+- Level 64 uses two approved deterministic hidden-cat additions to reach exactly ten.
+
 ## Recovery roadmap
 
 1. Define the desired player experience and a small set of puzzle acceptance
