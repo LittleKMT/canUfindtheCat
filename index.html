@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#6c4cff" />
-    <meta name="description" content="Can You Find the Cat? Search 55 detailed scenes for 295 hidden cats." />
+    <meta name="description" content="Can You Find the Cat? Search 75 detailed scenes for 495 hidden cats." />
     <title>Can You Find the Cat?</title>
     <link rel="icon" href="assets/cat-mark.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=7" />
+    <link rel="stylesheet" href="styles.css?v=8-review" />
   </head>
   <body>
     <main class="app-shell">
@@ -29,9 +29,10 @@
           <p class="hero-copy">Look closely. Find every hidden cat before your hearts run out!</p>
           <button class="primary-button" id="playButton"><span>Play now</span><b>→</b></button>
           <button class="text-button" id="levelsButton">Choose a level</button>
+          <button class="review-entry-button" id="reviewModeButton"><span>Review mode</span><b>Skip through every level →</b></button>
           <div class="continue-note" id="continueNote"></div>
         </div>
-        <p class="footer-note">55 original puzzles · 295 hidden cats</p>
+        <p class="footer-note">75 original puzzles · 495 hidden cats</p>
       </section>
 
       <section class="level-screen screen" id="levelScreen" aria-label="Level selection">
@@ -55,6 +56,10 @@
         </header>
 
         <div class="puzzle-wrap">
+          <div class="review-toolbar" id="reviewToolbar" hidden>
+            <span id="reviewPosition">REVIEW 1 / 75</span>
+            <button id="reviewNextButton">Next →</button>
+          </div>
           <div class="image-frame" id="imageFrame">
             <div class="image-stage" id="imageStage">
               <img id="puzzleImage" alt="A detailed hidden-cat puzzle" draggable="false" />
@@ -95,6 +100,6 @@
       </section>
     </div>
 
-    <script src="app.js?v=55-levels-v12"></script>
+    <script src="app.js?v=75-levels-v15-review"></script>
   </body>
 </html>

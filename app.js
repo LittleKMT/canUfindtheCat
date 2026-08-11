@@ -109,6 +109,26 @@ const levelCatalog = [
     {x:.393,y:.055,hitX:.025,hitY:.028,clipX:.020,clipY:.025},{x:.117,y:.106,hitX:.025,hitY:.025,clipX:.022,clipY:.020},{x:.672,y:.142,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.915,y:.281,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.189,y:.348,hitX:.025,hitY:.028,clipX:.018,clipY:.025},{x:.500,y:.483,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.879,y:.540,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.132,y:.589,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.508,y:.723,hitX:.025,hitY:.025,clipX:.022,clipY:.020},{x:.895,y:.882,hitX:.028,hitY:.030,clipX:.025,clipY:.028}] }
   ,{ file: "ink-10", name: "Mountain Weather Station", cats: [
     {x:.313,y:.101,hitX:.030,hitY:.025,clipX:.028,clipY:.018},{x:.111,y:.114,hitX:.025,hitY:.025,clipX:.020,clipY:.022},{x:.597,y:.215,hitX:.025,hitY:.025,clipX:.018,clipY:.018},{x:.873,y:.276,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.133,y:.449,hitX:.028,hitY:.025,clipX:.025,clipY:.018},{x:.901,y:.488,hitX:.025,hitY:.025,clipX:.022,clipY:.018},{x:.435,y:.532,hitX:.025,hitY:.025,clipX:.018,clipY:.018},{x:.087,y:.728,hitX:.025,hitY:.028,clipX:.022,clipY:.025},{x:.496,y:.759,hitX:.025,hitY:.025,clipX:.020,clipY:.018},{x:.854,y:.903,hitX:.025,hitY:.028,clipX:.022,clipY:.025}] }
+,{ file: "next-01", name: "Grand Railway Terminal", cats: [{"x":0.124,"y":0.118,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.2855,"y":0.0997,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1407,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8293,"y":0.1407,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1296,"y":0.3441,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3712,"y":0.3385,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.5877,"y":0.3947,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8349,"y":0.4466,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6978,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.75,"y":0.8194,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-02", name: "Rooftop Market Maze", cats: [{"x":0.1272,"y":0.114,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3971,"y":0.0797,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6635,"y":0.1248,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8772,"y":0.1089,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1415,"y":0.3242,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.4063,"y":0.3106,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.7193,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8668,"y":0.4785,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2628,"y":0.6978,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.7181,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-03", name: "Clockwork Foundry", cats: [{"x":0.116,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3732,"y":0.1196,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6316,"y":0.1288,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1687,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1495,"y":0.3321,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3824,"y":0.3465,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6316,"y":0.3549,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8349,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6898,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6782,"y":0.7795,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-04", name: "Orbital Assembly Hangar", cats: [{"x":0.0873,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3094,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8692,"y":0.1328,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3585,"y":0.3226,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6515,"y":0.3509,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4426,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2436,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.7101,"y":0.7675,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-05", name: "Toy Conveyor Factory", cats: [{"x":0.0542,"y":0.0407,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.2831,"y":0.1794,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.3254,"y":0.3301,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.925,"y":0.323,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.0678,"y":0.8509,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.4625,"y":0.4226,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.6707,"y":0.4386,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.614,"y":0.5183,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.618,"y":0.9067,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.5024,"y":0.8772,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04}] }
+  ,{ file: "next-06", name: "Grand Pumping Station", cats: [{"x":0.116,"y":0.1021,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3493,"y":0.1156,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6156,"y":0.1089,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8293,"y":0.1208,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1336,"y":0.3042,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3983,"y":0.3226,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6635,"y":0.3349,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.862,"y":0.4466,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2356,"y":0.6858,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6942,"y":0.7636,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-07", name: "Botanical Glasshouse", cats: [{"x":0.1001,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3333,"y":0.0837,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.0969,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1128,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3983,"y":0.3146,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6794,"y":0.3389,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8509,"y":0.4825,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2309,"y":0.6898,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6543,"y":0.7715,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-08", name: "Inventor Curiosity Room", cats: [{"x":0.1033,"y":0.0981,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3254,"y":0.1116,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1089,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8692,"y":0.1288,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3162,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3983,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6715,"y":0.3429,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4665,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.7022,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-09", name: "Lantern Pottery Lane", cats: [{"x":0.116,"y":0.126,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.1156,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1368,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1288,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1216,"y":0.3242,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3744,"y":0.3385,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6635,"y":0.3549,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4825,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2468,"y":0.6978,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6974,"y":0.7875,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-10", name: "Treehouse Village", cats: [{"x":0.1192,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1089,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1256,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3226,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6635,"y":0.3429,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8509,"y":0.4825,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6782,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-11", name: "Old Bakery Kitchen", isColor: true, cats: [{"x":0.1192,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0997,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1168,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1208,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3824,"y":0.3266,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3429,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2468,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6942,"y":0.7795,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-12", name: "Canal Flower Market", isColor: true, cats: [{"x":0.2384,"y":0.051,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.6212,"y":0.1396,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.9266,"y":0.3301,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.3206,"y":0.453,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.6675,"y":0.6922,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.1411,"y":0.323,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.5813,"y":0.3509,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.7974,"y":0.437,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.5375,"y":0.2352,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04},{"x":0.4944,"y":0.5821,"hitX":0.045,"hitY":0.045,"clipX":0.04,"clipY":0.04}] }
+  ,{ file: "next-13", name: "Seaside Amusement Pier", isColor: true, cats: [{"x":0.1192,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.5997,"y":0.1089,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1216,"y":0.3162,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6555,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6978,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6782,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-14", name: "Dragon Archive", isColor: true, cats: [{"x":0.1112,"y":0.1061,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3333,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8692,"y":0.1288,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1216,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3429,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8509,"y":0.4785,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6862,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-15", name: "Robot Transit Factory", isColor: true, cats: [{"x":0.116,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3872,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6862,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-16", name: "Gardener Tool Shed", isColor: true, cats: [{"x":0.116,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6862,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-17", name: "Sports Equipment Workshop", isColor: true, cats: [{"x":0.116,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6862,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-18", name: "Tropical Greenhouse", isColor: true, cats: [{"x":0.116,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6862,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-19", name: "Lunar Control Laboratory", isColor: true, cats: [{"x":0.116,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6862,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-20", name: "Lantern Bazaar", isColor: true, cats: [{"x":0.116,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6862,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
 ].map(level => ({ ...level, image: `assets/levels/${level.file}.webp`, answer: `assets/levels/${level.file}-answer.webp` }));
 
 // Fixed shuffle: varied on first load, stable across refreshes so saved progress stays meaningful.
@@ -136,7 +156,7 @@ const DEPLOYED_LEVEL_ORDER_V10 = [
   "ten-05", "dark-14", "ten-09", "dark-07", "classic-08",
   "dark-12", "classic-15", "dark-17", "classic-02", "dark-09"
 ];
-const LEVEL_ORDER = [
+const DEPLOYED_LEVEL_ORDER_V12 = [
   "dark-05", "ten-08", "ink-03", "ten-03", "ink-01",
   "dark-06", "classic-03", "dark-01", "classic-12", "dark-14",
   "classic-01", "dark-11", "classic-04", "dark-15", "dark-03",
@@ -149,17 +169,30 @@ const LEVEL_ORDER = [
   "dark-02", "ten-04", "ink-07", "classic-08", "ink-02",
   "hard-02", "classic-02", "ink-09", "classic-13", "ink-08"
 ];
+const LEVEL_ORDER = [
+  ...DEPLOYED_LEVEL_ORDER_V12,
+  "next-01", "next-02", "next-03", "next-04", "next-05",
+  "next-06", "next-07", "next-08", "next-09", "next-10",
+  "next-11", "next-12", "next-13", "next-14", "next-15",
+  "next-16", "next-17", "next-18", "next-19", "next-20"
+];
 const levelByFile = new Map(levelCatalog.map(level => [level.file, level]));
 const levels = LEVEL_ORDER.map(file => levelByFile.get(file));
 
-const CONTENT_VERSION = "fifty-five-levels-v12";
+const CONTENT_VERSION = "seventy-five-levels-v13";
 const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
 const previousContentVersion = localStorage.getItem("cat-content-version");
 if (previousContentVersion !== CONTENT_VERSION) {
   const oldScores = JSON.parse(localStorage.getItem("cat-scores") || "{}");
   const scoresByFile = {};
   const storedOrder = JSON.parse(localStorage.getItem("cat-level-order") || "null");
-  const versionOrder = previousContentVersion === "forty-five-interleaved-levels-v9" ? V9_LEVEL_ORDER : previousContentVersion === "fifty-five-interleaved-levels-v10" ? DEPLOYED_LEVEL_ORDER_V10 : null;
+  const versionOrder = previousContentVersion === "forty-five-interleaved-levels-v9"
+    ? V9_LEVEL_ORDER
+    : previousContentVersion === "fifty-five-interleaved-levels-v10"
+      ? DEPLOYED_LEVEL_ORDER_V10
+      : previousContentVersion === "fifty-five-levels-v12"
+        ? DEPLOYED_LEVEL_ORDER_V12
+        : null;
   const previousOrder = storedOrder || versionOrder || levelCatalog.map(level => level.file);
   Object.entries(oldScores).forEach(([index, score]) => {
     const file = previousOrder[Number(index)];
@@ -189,6 +222,7 @@ const state = {
   hearts: 5, hints: 3, startedAt: 0, elapsed: 0, timerId: null, found: new Set(),
   solved: false, sound: localStorage.getItem("cat-sound") !== "off",
   palette: localStorage.getItem("cat-palette") === "light" ? "light" : "dark",
+  reviewMode: false,
   scale: 1, panX: 0, panY: 0, dragging: false, moved: false, pointerX: 0, pointerY: 0,
   pointers: new Map(), gesture: false, pinchDistance: 0, pinchMidpoint: null
 };
@@ -214,6 +248,32 @@ function renderHome() {
   const completed = Object.keys(state.scores).length;
   $("#continueNote").textContent = completed ? `${completed} of ${levels.length} puzzles completed` : "Progress saves automatically";
   $("#startSoundButton").textContent = state.sound ? "♪" : "×";
+}
+
+function setReviewMode(active) {
+  state.reviewMode = active;
+  document.body.classList.toggle("review-mode", active);
+  $("#reviewToolbar").hidden = !active;
+}
+
+function enterReviewMode() {
+  setReviewMode(true);
+  const savedReviewLevel = Number(localStorage.getItem("cat-review-current"));
+  const reviewLevel = Number.isInteger(savedReviewLevel) ? Math.min(Math.max(savedReviewLevel, 0), levels.length - 1) : 0;
+  startLevel(reviewLevel);
+}
+
+function leaveReviewMode() {
+  if (!state.reviewMode) return;
+  setReviewMode(false);
+  state.level = Math.min(Number(localStorage.getItem("cat-current")) || 0, levels.length - 1);
+}
+
+function reviewNextLevel() {
+  if (!state.reviewMode) return;
+  const nextLevel = state.level === levels.length - 1 ? 0 : state.level + 1;
+  localStorage.setItem("cat-review-current", String(nextLevel));
+  startLevel(nextLevel);
 }
 
 function applyPalette(palette) {
@@ -245,8 +305,12 @@ function startLevel(index) {
   const level = levels[index];
   state.level = index; state.hearts = 5; state.hints = 3; state.solved = false; state.elapsed = 0; state.found = new Set();
   document.body.classList.toggle("color-level", Boolean(level.isColor));
-  resetView(); save(); showScreen("gameScreen");
+  resetView();
+  if (!state.reviewMode) save();
+  showScreen("gameScreen");
   $("#levelLabel").textContent = `LEVEL ${index + 1}`;
+  $("#reviewPosition").textContent = `REVIEW ${index + 1} / ${levels.length}`;
+  $("#reviewToolbar").hidden = !state.reviewMode;
   $("#progressFill").style.width = "0%"; $("#catProgress").textContent = `0 / ${level.cats.length}`;
   foundCats.innerHTML = ""; hintLens.classList.remove("show");
   updateHearts(); updateHints();
@@ -333,9 +397,11 @@ function wrongGuess(x, y) {
 function solveLevel() {
   state.solved = true; stopTimer(); tone("win"); confetti();
   const stars = state.hearts >= 4 ? 3 : state.hearts >= 2 ? 2 : 1;
-  const previous = state.scores[state.level];
-  state.scores[state.level] = { stars: Math.max(stars, previous?.stars || 0), best: Math.min(state.elapsed, previous?.best ?? Infinity) };
-  state.unlocked = Math.max(state.unlocked, Math.min(state.level + 1, levels.length - 1)); save();
+  if (!state.reviewMode) {
+    const previous = state.scores[state.level];
+    state.scores[state.level] = { stars: Math.max(stars, previous?.stars || 0), best: Math.min(state.elapsed, previous?.best ?? Infinity) };
+    state.unlocked = Math.max(state.unlocked, Math.min(state.level + 1, levels.length - 1)); save();
+  }
   $("#progressFill").style.width = "100%";
   setTimeout(() => showResult(stars), 800);
 }
@@ -413,11 +479,17 @@ function confetti() {
 
 $("#playButton").addEventListener("click", () => startLevel(Math.min(state.unlocked, levels.length - 1)));
 $("#levelsButton").addEventListener("click", renderLevels);
-document.querySelectorAll('[data-action="home"]').forEach(button => button.addEventListener("click", () => { resetView(); renderHome(); showScreen("startScreen"); }));
+$("#reviewModeButton").addEventListener("click", enterReviewMode);
+$("#reviewNextButton").addEventListener("click", reviewNextLevel);
+document.querySelectorAll('[data-action="home"]').forEach(button => button.addEventListener("click", () => { resetView(); leaveReviewMode(); renderHome(); showScreen("startScreen"); }));
 $("#hintButton").addEventListener("click", useHint);
 $("#zoomReset").addEventListener("click", resetView);
 document.querySelectorAll("[data-palette]").forEach(button => button.addEventListener("click", () => applyPalette(button.dataset.palette)));
-$("#nextButton").addEventListener("click", () => { hideResult(); startLevel(state.level === levels.length-1 ? 0 : state.level+1); });
+$("#nextButton").addEventListener("click", () => {
+  hideResult();
+  if (state.reviewMode) reviewNextLevel();
+  else startLevel(state.level === levels.length - 1 ? 0 : state.level + 1);
+});
 $("#resultLevelsButton").addEventListener("click", () => { hideResult(); renderLevels(); });
 $("#startSoundButton").addEventListener("click", () => { state.sound=!state.sound; localStorage.setItem("cat-sound",state.sound?"on":"off"); renderHome(); tone("hint"); });
 
