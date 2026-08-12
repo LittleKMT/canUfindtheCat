@@ -129,8 +129,13 @@ const levelCatalog = [
   ,{ file: "next-18", name: "Tropical Greenhouse", isColor: true, cats: [{"x":0.116,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6862,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
   ,{ file: "next-19", name: "Lunar Control Laboratory", isColor: true, cats: [{"x":0.116,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6862,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
   ,{ file: "next-20", name: "Lantern Bazaar", isColor: true, cats: [{"x":0.116,"y":0.11,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.3413,"y":0.0957,"hitX":0.0399,"hitY":0.0375,"clipX":0.0349,"clipY":0.0325},{"x":0.6077,"y":0.1128,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8612,"y":0.1248,"hitX":0.0447,"hitY":0.035,"clipX":0.0397,"clipY":0.03},{"x":0.1176,"y":0.3122,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3904,"y":0.3305,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6595,"y":0.3469,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.4745,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.2388,"y":0.6938,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.6862,"y":0.7755,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-21", name: "Lighthouse Keeper Workshop", isColor: true, cats: [{"x":0.0793,"y":0.0941,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.2588,"y":0.1798,"hitX":0.0427,"hitY":0.0459,"clipX":0.0377,"clipY":0.0409},{"x":0.5327,"y":0.1886,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.7855,"y":0.1419,"hitX":0.0447,"hitY":0.0391,"clipX":0.0397,"clipY":0.0341},{"x":0.1854,"y":0.368,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.4302,"y":0.4183,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6874,"y":0.4226,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8589,"y":0.5064,"hitX":0.0471,"hitY":0.0351,"clipX":0.0421,"clipY":0.0301},{"x":0.3664,"y":0.7177,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.7819,"y":0.7675,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-22", name: "Alpine Cable Station", isColor: true, cats: [{"x":0.1001,"y":0.138,"hitX":0.0387,"hitY":0.0383,"clipX":0.0337,"clipY":0.0333},{"x":0.2939,"y":0.2077,"hitX":0.0427,"hitY":0.0459,"clipX":0.0377,"clipY":0.0409},{"x":0.6077,"y":0.1328,"hitX":0.035,"hitY":0.0419,"clipX":0.03,"clipY":0.0369},{"x":0.8533,"y":0.1699,"hitX":0.0447,"hitY":0.0391,"clipX":0.0397,"clipY":0.0341},{"x":0.1376,"y":0.4039,"hitX":0.0515,"hitY":0.0363,"clipX":0.0465,"clipY":0.0313},{"x":0.3824,"y":0.4382,"hitX":0.035,"hitY":0.0435,"clipX":0.03,"clipY":0.0385},{"x":0.6077,"y":0.5024,"hitX":0.0519,"hitY":0.0479,"clipX":0.0469,"clipY":0.0429},{"x":0.8349,"y":0.4541,"hitX":0.0471,"hitY":0.0387,"clipX":0.0421,"clipY":0.0337},{"x":0.2707,"y":0.7177,"hitX":0.0355,"hitY":0.0471,"clipX":0.0305,"clipY":0.0421},{"x":0.7341,"y":0.7396,"hitX":0.0483,"hitY":0.0355,"clipX":0.0433,"clipY":0.0305}] }
+  ,{ file: "next-23", name: "Museum Restoration Hall", isColor: true, cats: [[.2257,.299],[.5383,.2959],[.9051,.2097],[.1659,.4386],[.5136,.4083],[.453,.5614],[.7416,.4625],[.6898,.7376],[.5662,.8549],[.8668,.8182]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
+  ,{ file: "next-24", name: "Tropical Riverboat Engine Room", isColor: true, cats: [[.1053,.2512],[.4075,.2225],[.6842,.1954],[.9282,.2727],[.2257,.5415],[.453,.5933],[.6715,.5016],[.2153,.6475],[.362,.7528],[.8931,.764]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
+  ,{ file: "next-25", name: "Winter Observatory Library", isColor: true, cats: [[.1404,.4657],[.2536,.6204],[.4585,.445],[.8987,.3373],[.8573,.134],[.7727,.3724],[.6818,.5335],[.4705,.6467],[.4761,.7711],[.8796,.799]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
 ].map(level => {
-  const assetVersion = level.file.startsWith("next-") ? "?v=reviewed-56-75-v4" : "";
+  const assetVersion = level.file.startsWith("next-") ? "?v=reviewed-76-80-v1" : "";
   return { ...level, image: `assets/levels/${level.file}.webp${assetVersion}`, answer: `assets/levels/${level.file}-answer.webp${assetVersion}` };
 });
 
@@ -215,12 +220,16 @@ const PREVIOUS_LEVEL_ORDER_V13 = [
   "next-16", "next-17", "next-18", "next-19", "next-20"
 ];
 const levelByFile = new Map(levelCatalog.map(level => [level.file, level]));
-const LEVEL_ORDER = [...PREVIOUS_LEVEL_ORDER_V13].sort((left, right) =>
+const PREVIOUS_LEVEL_ORDER_V14 = [...PREVIOUS_LEVEL_ORDER_V13].sort((left, right) =>
   levelByFile.get(left).cats.length - levelByFile.get(right).cats.length
 );
+const LEVEL_ORDER = [
+  ...PREVIOUS_LEVEL_ORDER_V14,
+  "next-21", "next-22", "next-23", "next-24", "next-25"
+];
 const levels = LEVEL_ORDER.map(file => levelByFile.get(file));
 
-const CONTENT_VERSION = "difficulty-sorted-levels-v14";
+const CONTENT_VERSION = "eighty-levels-v15";
 const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
 const previousContentVersion = localStorage.getItem("cat-content-version");
 if (previousContentVersion !== CONTENT_VERSION) {
@@ -235,7 +244,9 @@ if (previousContentVersion !== CONTENT_VERSION) {
         ? DEPLOYED_LEVEL_ORDER_V12
         : previousContentVersion === "seventy-five-levels-v13"
           ? PREVIOUS_LEVEL_ORDER_V13
-          : null;
+          : previousContentVersion === "difficulty-sorted-levels-v14"
+            ? PREVIOUS_LEVEL_ORDER_V14
+            : null;
   const previousOrder = storedOrder || versionOrder || levelCatalog.map(level => level.file);
   Object.entries(oldScores).forEach(([index, score]) => {
     const file = previousOrder[Number(index)];

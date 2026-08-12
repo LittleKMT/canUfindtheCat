@@ -130,6 +130,21 @@ approved first improvement is a separate Review mode that can skip directly
 through levels without changing player scores or progress. Use that mode to
 review the 75-level catalog before doing more expansion.
 
+## Artwork repair batch: levels 76-80
+
+- Status: levels 76-80 are locally complete; commit, push, and deployment are pending.
+- The first transparent-sprite versions were rejected because the cats looked
+  pasted over the backgrounds despite tinting and alpha occlusion.
+- Scene-edited player previews for levels 76 and 77 were approved as the correct
+  direction: cats match the scene's illustration, lighting, material, scale,
+  perspective, and real foreground occlusion.
+- Levels 78-80 now use scene-edited cats hidden behind real museum, riverboat,
+  and observatory objects. Each level has exactly ten fixed cat targets.
+- Player and natural-orange answer images, catalog geometry, and the 375x812
+  mobile check are complete for levels 78-80. No horizontal overflow was found.
+- Commit, push, public deployment, and public-site verification remain pending.
+- Do not restore or deploy the rejected transparent-sprite versions.
+
 ## Active review-mode increment
 
 - Status: implemented, mobile-verified, and included in the current release.
