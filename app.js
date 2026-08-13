@@ -134,8 +134,13 @@ const levelCatalog = [
   ,{ file: "next-23", name: "Museum Restoration Hall", isColor: true, cats: [[.2257,.299],[.5383,.2959],[.9051,.2097],[.1659,.4386],[.5136,.4083],[.453,.5614],[.7416,.4625],[.6898,.7376],[.5662,.8549],[.8668,.8182]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
   ,{ file: "next-24", name: "Tropical Riverboat Engine Room", isColor: true, cats: [[.1053,.2512],[.4075,.2225],[.6842,.1954],[.9282,.2727],[.2257,.5415],[.453,.5933],[.6715,.5016],[.2153,.6475],[.362,.7528],[.8931,.764]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
   ,{ file: "next-25", name: "Winter Observatory Library", isColor: true, cats: [[.1404,.4657],[.2536,.6204],[.4585,.445],[.8987,.3373],[.8573,.134],[.7727,.3724],[.6818,.5335],[.4705,.6467],[.4761,.7711],[.8796,.799]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
+  ,{ file: "next-26", name: "Clockmaker Attic Workshop", isColor: true, cats: [[.1156,.1172],[.5144,.1515],[.8517,.1762],[.6563,.4099],[.5207,.5104],[.9282,.4617],[.6922,.6467],[.311,.8493],[.6683,.8716],[.8995,.8485]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
+  ,{ file: "next-27", name: "Rainy Railway Baggage Depot", isColor: true, cats: [[.1045,.0542],[.0638,.4466],[.8931,.1324],[.9139,.3931],[.4936,.4657],[.3947,.5279],[.7496,.5303],[.1786,.8062],[.9203,.7225],[.9019,.8732]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
+  ,{ file: "next-28", name: "Misty Floating Market", isColor: true, cats: [[.122,.1842],[.3987,.1108],[.8589,.1659],[.815,.4378],[.3708,.5112],[.2504,.5526],[.9418,.5981],[.299,.8198],[.4362,.7488],[.7552,.8692]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
+  ,{ file: "next-29", name: "Old Theatre Backstage", isColor: true, cats: [[.4394,.1053],[.2767,.3804],[.5112,.4633],[.6627,.4474],[.4872,.7018],[.8381,.5502],[.2536,.8238],[.7002,.8246],[.0893,.8118],[.9418,.8238]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
+  ,{ file: "next-30", name: "Alpine Rescue Hut", isColor: true, cats: [[.4242,.0981],[.0789,.3365],[.3126,.2951],[.4266,.3517],[.6754,.5502],[.4083,.6459],[.185,.8046],[.819,.6124],[.764,.8788],[.9171,.7791]].map(([x,y])=>({x,y,hitX:.035,hitY:.035,clipX:.03,clipY:.03})) }
 ].map(level => {
-  const assetVersion = level.file.startsWith("next-") ? "?v=reviewed-76-80-v1" : "";
+  const assetVersion = level.file.startsWith("next-") ? "?v=reviewed-81-85-v1" : "";
   return { ...level, image: `assets/levels/${level.file}.webp${assetVersion}`, answer: `assets/levels/${level.file}-answer.webp${assetVersion}` };
 });
 
@@ -223,13 +228,17 @@ const levelByFile = new Map(levelCatalog.map(level => [level.file, level]));
 const PREVIOUS_LEVEL_ORDER_V14 = [...PREVIOUS_LEVEL_ORDER_V13].sort((left, right) =>
   levelByFile.get(left).cats.length - levelByFile.get(right).cats.length
 );
-const LEVEL_ORDER = [
+const PREVIOUS_LEVEL_ORDER_V15 = [
   ...PREVIOUS_LEVEL_ORDER_V14,
   "next-21", "next-22", "next-23", "next-24", "next-25"
 ];
+const LEVEL_ORDER = [
+  ...PREVIOUS_LEVEL_ORDER_V15,
+  "next-26", "next-27", "next-28", "next-29", "next-30"
+];
 const levels = LEVEL_ORDER.map(file => levelByFile.get(file));
 
-const CONTENT_VERSION = "eighty-levels-v15";
+const CONTENT_VERSION = "eighty-five-levels-v16";
 const TOTAL_CATS = levels.reduce((sum, level) => sum + level.cats.length, 0);
 const previousContentVersion = localStorage.getItem("cat-content-version");
 if (previousContentVersion !== CONTENT_VERSION) {
@@ -246,6 +255,8 @@ if (previousContentVersion !== CONTENT_VERSION) {
           ? PREVIOUS_LEVEL_ORDER_V13
           : previousContentVersion === "difficulty-sorted-levels-v14"
             ? PREVIOUS_LEVEL_ORDER_V14
+            : previousContentVersion === "eighty-levels-v15"
+              ? PREVIOUS_LEVEL_ORDER_V15
             : null;
   const previousOrder = storedOrder || versionOrder || levelCatalog.map(level => level.file);
   Object.entries(oldScores).forEach(([index, score]) => {

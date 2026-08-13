@@ -12,7 +12,7 @@ Can You Find the Cat? is a mobile-first, browser-based hidden-object game. A
 player opens a picture, taps hidden cats, loses one of five hearts for a wrong
 tap, may use three hints, and earns one to three stars after finding every cat.
 
-The current release has 75 puzzles and 495 cats, including 20 appended ten-cat
+The pending release has 85 puzzles and 595 cats, including 30 appended ten-cat
 scenes and a dedicated Product Owner Review mode.
 
 ## Implemented and smoke-tested
@@ -132,7 +132,7 @@ review the 75-level catalog before doing more expansion.
 
 ## Artwork repair batch: levels 76-80
 
-- Status: levels 76-80 are locally complete; commit, push, and deployment are pending.
+- Status: levels 76-80 are locally complete and committed; push and public deployment are pending.
 - The first transparent-sprite versions were rejected because the cats looked
   pasted over the backgrounds despite tinting and alpha occlusion.
 - Scene-edited player previews for levels 76 and 77 were approved as the correct
@@ -142,8 +142,21 @@ review the 75-level catalog before doing more expansion.
   and observatory objects. Each level has exactly ten fixed cat targets.
 - Player and natural-orange answer images, catalog geometry, and the 375x812
   mobile check are complete for levels 78-80. No horizontal overflow was found.
-- Commit, push, public deployment, and public-site verification remain pending.
+- Push, public deployment, and public-site verification remain pending.
 - Do not restore or deploy the rejected transparent-sprite versions.
+
+## Scene-integrated expansion: levels 81-85
+
+- Status: locally complete and approved for deployment; commit, push, and public verification are pending.
+- Five distinct scene-aware player/answer pairs are integrated: clockmaker attic,
+  rainy railway depot, floating market, theatre backstage, and alpine rescue hut.
+- Each level has exactly ten fixed cat targets. Cats are hidden by scene-specific
+  railings, furniture, machinery, containers, fabric, or equipment; no reusable
+  transparent sprite coordinate template was used.
+- Natural-orange answers preserve the same ten hiding places and add no circles,
+  arrows, glow, or labels.
+- The 375x812 browser check passed all five levels: 1254px image loaded, 0/10
+  progress shown, no horizontal overflow, 85 level cards, and no console errors.
 
 ## Active review-mode increment
 
